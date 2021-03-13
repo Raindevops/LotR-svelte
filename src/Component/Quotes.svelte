@@ -26,14 +26,13 @@
 <main>
     <h1>Quotes section</h1>
     {#if quotes !== undefined}
-
         {#await quotes}
+            <p>Is loading</p>
             {:then quotes}
             {#each quotes as quote }
                 <p>{quote.dialog}</p>
             {/each}
         {/await}
-
     {/if}
 </main>
 
