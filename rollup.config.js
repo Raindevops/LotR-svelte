@@ -48,6 +48,7 @@ export default {
             preprocess: preprocess()
         }),
         replace({
+            preventAssignment: true,
             __lotr: JSON.stringify({
                 env: {
                     ...config().parsed

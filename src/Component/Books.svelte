@@ -8,7 +8,7 @@
             return;
         }
     
-        const response = await fetch("https://the-one-api.dev/v2/book");
+        const response = await fetch(`${__lotr.env.API_URL}/book`);
         const data = await response.json();
         books = data.docs
 
