@@ -2182,7 +2182,7 @@ var app = (function () {
     	return child_ctx;
     }
 
-    // (15:4) {#if books !== undefined}
+    // (22:4) {#if books !== undefined}
     function create_if_block(ctx) {
     	let await_block_anchor;
     	let promise;
@@ -2233,7 +2233,7 @@ var app = (function () {
     		block,
     		id: create_if_block.name,
     		type: "if",
-    		source: "(15:4) {#if books !== undefined}",
+    		source: "(22:4) {#if books !== undefined}",
     		ctx
     	});
 
@@ -2255,7 +2255,7 @@ var app = (function () {
     	return block;
     }
 
-    // (18:12) {:then books}
+    // (25:12) {:then books}
     function create_then_block(ctx) {
     	let each_1_anchor;
     	let each_value = /*books*/ ctx[0];
@@ -2316,14 +2316,14 @@ var app = (function () {
     		block,
     		id: create_then_block.name,
     		type: "then",
-    		source: "(18:12) {:then books}",
+    		source: "(25:12) {:then books}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (19:12) {#each books as book}
+    // (26:12) {#each books as book}
     function create_each_block(ctx) {
     	let p;
     	let t_value = /*book*/ ctx[1].name + "";
@@ -2333,7 +2333,7 @@ var app = (function () {
     		c: function create() {
     			p = element("p");
     			t = text(t_value);
-    			add_location(p, file$4, 19, 16, 470);
+    			add_location(p, file$4, 26, 16, 683);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, p, anchor);
@@ -2351,14 +2351,14 @@ var app = (function () {
     		block,
     		id: create_each_block.name,
     		type: "each",
-    		source: "(19:12) {#each books as book}",
+    		source: "(26:12) {#each books as book}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (16:22)               <p>Loading</p>              {:then books}
+    // (23:22)               <p>Loading</p>              {:then books}
     function create_pending_block(ctx) {
     	let p;
 
@@ -2366,7 +2366,7 @@ var app = (function () {
     		c: function create() {
     			p = element("p");
     			p.textContent = "Loading";
-    			add_location(p, file$4, 16, 12, 376);
+    			add_location(p, file$4, 23, 12, 589);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, p, anchor);
@@ -2381,7 +2381,7 @@ var app = (function () {
     		block,
     		id: create_pending_block.name,
     		type: "pending",
-    		source: "(16:22)               <p>Loading</p>              {:then books}",
+    		source: "(23:22)               <p>Loading</p>              {:then books}",
     		ctx
     	});
 
@@ -2401,8 +2401,8 @@ var app = (function () {
     			h1.textContent = "Books section";
     			t1 = space();
     			if (if_block) if_block.c();
-    			add_location(h1, file$4, 13, 4, 285);
-    			add_location(main, file$4, 12, 0, 273);
+    			add_location(h1, file$4, 20, 4, 498);
+    			add_location(main, file$4, 19, 0, 486);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -2452,9 +2452,15 @@ var app = (function () {
     	let books = [];
 
     	onMount(async function () {
+    		if (localStorage.getItem("books")) {
+    			$$invalidate(0, books = JSON.parse(localStorage.getItem("books")));
+    			return;
+    		}
+
     		const response = await fetch("https://the-one-api.dev/v2/book");
     		const data = await response.json();
     		$$invalidate(0, books = data.docs);
+    		localStorage.setItem("books", JSON.stringify(books));
     	});
 
     	const writable_props = [];
