@@ -1,24 +1,40 @@
 <script>
-    export let name;
+    import {Router, Link, Route} from "svelte-routing"
+    import Books from "./Component/Books.svelte"
+    import Movies from "./Component/Movies.svelte"
+    import Quotes from "./Component/Quotes.svelte"
+    import Characters from "./Component/Characters.svelte"
+    export let url = '';
 </script>
 
-<header>
-    <span>
-        LotR - Svelte
-    </span>
-    <nav>
-        <ul>
-        <li>Books</li>
-        <li>Movies</li>
-        <li>Quotes</li>
-        <li>Characters</li>
-        </ul>
-    </nav>
-</header>
+<Router url={url}>
+    <header>
+        <nav>
+            <Link to="/">LotR - Svelte</Link>
+            <Link to="/Books">Books</Link>
+            <Link to="/Movies">Movies</Link>
+            <Link to="/Quotes">Quotes</Link>
+            <Link to="/Characters">Characters</Link>
+        </nav>
+    </header>
 
-<main>
-    <h1> Hello {name} </h1>
-</main>
+    <main>
+        <div>
+            <Route path="/Books">
+                <Books/>
+            </Route>
+            <Route path="/Movies">
+                <Movies/>
+            </Route>
+            <Route path="/Quotes">
+                <Quotes/>
+            </Route>
+            <Route path="/Characters">
+                <Characters/>
+            </Route>
+        </div>
+    </main>
+</Router>
 
 <style type="text/scss">
     $orange : #ff3e00;
@@ -26,34 +42,14 @@
         width: 100%;
         display: flex;
         justify-content: space-between;
-        background-color $orange;
+        background-color: $orange;
         color: white;
-        span {
-            margin: 1rem 0 1rem .75rem;
-        }
-        nav {
-            margin : 0 .75rem;
-            ul {
-                display: flex;
-                padding-left: 0;
-                list-style: none;
-                li:not(:first-child) {
-                    margin-left: .75rem;
-                }
-            }
-        }
     }
     main {
         text-align: center;
         padding: 1em;
         max-width: 240px;
         margin: 0 auto;
-        h1 {
-            color: $orange;
-            text-transform: uppercase;
-            font-size: 4em;
-            font-weight: 100;
-        }
     }
     @media (min-width: 640px){
         main{
