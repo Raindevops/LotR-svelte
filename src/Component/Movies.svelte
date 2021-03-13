@@ -17,7 +17,6 @@
         })
         .then(result => result.json())
         .then(data => {
-            console.log(data.docs)
             localStorage.setItem("movies", JSON.stringify(data.docs));
             return movies = data.docs;
         });
