@@ -1,9 +1,10 @@
 <script>
-    import {Router, Link, Route} from "svelte-routing"
-    import Books from "./Component/Books.svelte"
-    import Movies from "./Component/Movies.svelte"
-    import Quotes from "./Component/Quotes.svelte"
-    import Characters from "./Component/Characters.svelte"
+    import {Router, Link, Route} from "svelte-routing";
+    import Books from "./Component/Books/Books.svelte";
+    import Movies from "./Component/Movies/Movies.svelte";
+    import Quotes from "./Component/Quotes/Quotes.svelte";
+    import Characters from "./Component/Characters/Characters.svelte";
+    import Home from "./Component/Home/Home.svelte";
     export let url = '';
 </script>
 
@@ -20,6 +21,9 @@
 
     <main>
         <div>
+            <Route path="/">
+                <Home/>
+            </Route>
             <Route path="/Books">
                 <Books/>
             </Route>
@@ -37,24 +41,24 @@
 </Router>
 
 <style type="text/scss">
-    $orange : #ff3e00;
+    $gold : #C4B479;
     header {
         width: 100%;
         justify-content: space-between;
-        background-color: $orange;
+        background-color: black;
         display: flex;
         nav, span {
             margin: 1rem 0;
             padding: 0 .75rem;
         }
         :global(a) {
-            color:white;
+            color:$gold;
             text-decoration: none;
             display: inline-block;
             &:after{
                 content:'';
                 width: 0;
-                background-color: white;
+                background-color: $gold;
             }
             &:not(:first-child){
                 margin-left: 1rem;

@@ -1,9 +1,6 @@
 @font-face{
 	font-family: "Darleston";
 	src: url("/public/fonts/darleston/Darleston") format("otf");
-
-	font-family: "Italianno";
-	src: url("/public/fonts/italianno/Italianno-Regular") format("tff");
 }
 
 html, body {
@@ -12,15 +9,23 @@ html, body {
 	height: 100%;
 }
 body {
-	color: #333;
+	color: white;
 	margin: 0;
 	box-sizing: border-box;
-	font-family: "Italianno";
+	font-family: "Merienda";
+	background-color: black;
 }
 
 h1,h2,h3,h4,h5,h6{
 	font-family: "Darleston";
+	color: #C4B479;
 }
+
+h1{
+	font-size: 4em;
+}
+
+
 a {
 	color: rgb(0,100,200);
 	text-decoration: none;
