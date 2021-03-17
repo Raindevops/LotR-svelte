@@ -1,5 +1,6 @@
 <script>
     import {onMount} from 'svelte';
+    import ParseString from '../../Helpers/ParseString';
 
     export let book;
     let chapters = [];
@@ -16,6 +17,11 @@
             chapters = data.docs
             localStorage.setItem(`bookID-${book._id}`, JSON.stringify(chapters))
         });
+
+        chapters.map(chap=> {
+            chap.chapterName = ParseString.removeUselessSpace(chap.chapterName)
+        });
+        console.log(chapters)
 
     });
 </script>
