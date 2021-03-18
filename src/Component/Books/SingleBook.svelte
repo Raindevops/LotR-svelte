@@ -4,6 +4,7 @@
 
     export let book;
     let chapters = [];
+    let chaps = [];
 
     onMount(async function(){
 
@@ -18,27 +19,52 @@
             localStorage.setItem(`bookID-${book._id}`, JSON.stringify(chapters))
         });
 
-        chapters.map(chap=> {
-            chap.chapterName = ParseString.removeUselessSpace(chap.chapterName)
+        chaps = chapters.map(chap=> {
+            return chap.chapterName = ParseString.removeUselessSpace(chap.chapterName)
         });
-        console.log(chapters)
 
     });
 </script>
-    <h3>{book.name}</h3>
+<div class="book">
+    <div class="title">
+        <h3>{book.name}</h3>
+    </div>
     {#if chapters != undefined}
-
+    <div class="content">
         {#await chapters}
-            <p>loading</p>
-        {:then chapters}
-        
-            {#each chapters as chap }
-                <p>{chap.chapterName}</p>
-            {/each}
-            
+                <p>loading</p>
+        {:then _}
+            <table width="100%">
+                <tr>
+                    <td align="left">
+                        {#each chaps as chap, i}
+                            {#if i <= Math.ceil(chaps.length/2)}
+                                <p>{chap}</p>
+                            {/if}
+                        {/each}   
+                    </td>
+                    <td align="right">
+                        {#each chaps as chap, i}
+                            {#if i >= Math.ceil(chaps.length/2)}
+                                <p>{chap}</p>
+                            {/if}
+                        {/each}  
+                    </td>
+                </tr>
+            </table>
         {/await}
-
+        </div>
     {/if}
-<style>
-
+</div>
+<style type="text/scss">
+    .content{
+        text-align: left;
+        max-width: 640px;
+        margin: 0 auto;
+        table{
+            td{
+                vertical-align: top;
+            }
+        }
+    }
 </style>
