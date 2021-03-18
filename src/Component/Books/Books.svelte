@@ -19,17 +19,34 @@
 </script>
 
 <main>
-    <h1>Beyond Wonderland</h1>
+    <div class="background">
+    </div>
     {#if books !== undefined}
         {#await books}
             <p>Loading</p>
             {:then books}
-            {#each books as book}
-                <SingleBook book={book}/>
-            {/each}
+                {#each books as book}
+                    <SingleBook book={book}/>
+                {/each}
         {/await}
     {/if}
 </main>
 
 <style type="text/scss">
+    main{
+        position: relative;
+        height: calc(100vh - 65px);
+        .background{
+            background-image: url('../assets/book-background.png');
+            background-repeat: no-repeat;
+            background-size: contain;
+            width: 100%;
+            height: 100%;
+            position: fixed;
+            top:0;
+            left:0;
+            z-index: -1;
+        }
+        margin-top:  65px;
+    }
 </style>

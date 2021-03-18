@@ -47,6 +47,8 @@
         justify-content: space-between;
         background-color: black;
         display: flex;
+        position: fixed;
+        z-index: 50;
         nav, span {
             margin: 1rem 0;
             padding: 0 .75rem;

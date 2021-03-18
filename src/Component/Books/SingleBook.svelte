@@ -9,7 +9,11 @@
     onMount(async function(){
 
         if (localStorage.getItem(`bookID-${book._id}`)) {
-            chapters = JSON.parse(localStorage.getItem(`bookID-${book._id}`))
+            chapters = JSON.parse(localStorage.getItem(`bookID-${book._id}`));
+            chaps = chapters.map(chap=> {
+                return chap.chapterName = ParseString.removeUselessSpace(chap.chapterName)
+            });
+            return;
         }
 
         const req = await fetch(`${__lotr.env.API_URL}/book/${book._id}/chapter`)
@@ -27,7 +31,7 @@
 </script>
 <div class="book">
     <div class="title">
-        <h3>{book.name}</h3>
+        <h2>{book.name}</h2>
     </div>
     {#if chapters != undefined}
     <div class="content">
@@ -39,14 +43,14 @@
                     <td align="left">
                         {#each chaps as chap, i}
                             {#if i <= Math.ceil(chaps.length/2)}
-                                <p>{chap}</p>
+                                <p class="list-item left">{chap}</p>
                             {/if}
                         {/each}   
                     </td>
                     <td align="right">
                         {#each chaps as chap, i}
                             {#if i >= Math.ceil(chaps.length/2)}
-                                <p>{chap}</p>
+                                <p class="list-item right">{chap}</p>
                             {/if}
                         {/each}  
                     </td>
@@ -57,9 +61,19 @@
     {/if}
 </div>
 <style type="text/scss">
+    .book{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 100%;
+        min-height: fit-content;
+        h2{
+            margin:0;
+        }
+    }
     .content{
         text-align: left;
-        max-width: 640px;
+        max-width: 768px;
         margin: 0 auto;
         table{
             td{

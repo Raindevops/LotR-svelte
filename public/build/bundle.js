@@ -2208,7 +2208,7 @@ var app = (function () {
     	return child_ctx;
     }
 
-    // (32:4) {#if chapters != undefined}
+    // (36:4) {#if chapters != undefined}
     function create_if_block$4(ctx) {
     	let div;
     	let promise;
@@ -2230,8 +2230,8 @@ var app = (function () {
     		c: function create() {
     			div = element("div");
     			info.block.c();
-    			attr_dev(div, "class", "content svelte-1ciosnm");
-    			add_location(div, file$6, 32, 4, 920);
+    			attr_dev(div, "class", "content svelte-1me9ro");
+    			add_location(div, file$6, 36, 4, 1094);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -2261,7 +2261,7 @@ var app = (function () {
     		block,
     		id: create_if_block$4.name,
     		type: "if",
-    		source: "(32:4) {#if chapters != undefined}",
+    		source: "(36:4) {#if chapters != undefined}",
     		ctx
     	});
 
@@ -2283,7 +2283,7 @@ var app = (function () {
     	return block;
     }
 
-    // (36:8) {:then _}
+    // (40:8) {:then _}
     function create_then_block$4(ctx) {
     	let table;
     	let tr;
@@ -2324,14 +2324,14 @@ var app = (function () {
     			}
 
     			attr_dev(td0, "align", "left");
-    			attr_dev(td0, "class", "svelte-1ciosnm");
-    			add_location(td0, file$6, 38, 20, 1097);
+    			attr_dev(td0, "class", "svelte-1me9ro");
+    			add_location(td0, file$6, 42, 20, 1271);
     			attr_dev(td1, "align", "right");
-    			attr_dev(td1, "class", "svelte-1ciosnm");
-    			add_location(td1, file$6, 45, 20, 1397);
-    			add_location(tr, file$6, 37, 16, 1071);
+    			attr_dev(td1, "class", "svelte-1me9ro");
+    			add_location(td1, file$6, 49, 20, 1594);
+    			add_location(tr, file$6, 41, 16, 1245);
     			attr_dev(table, "width", "100%");
-    			add_location(table, file$6, 36, 12, 1033);
+    			add_location(table, file$6, 40, 12, 1207);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, table, anchor);
@@ -2409,14 +2409,14 @@ var app = (function () {
     		block,
     		id: create_then_block$4.name,
     		type: "then",
-    		source: "(36:8) {:then _}",
+    		source: "(40:8) {:then _}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (41:28) {#if i <= Math.ceil(chaps.length/2)}
+    // (45:28) {#if i <= Math.ceil(chaps.length/2)}
     function create_if_block_2(ctx) {
     	let p;
     	let t_value = /*chap*/ ctx[4] + "";
@@ -2426,7 +2426,8 @@ var app = (function () {
     		c: function create() {
     			p = element("p");
     			t = text(t_value);
-    			add_location(p, file$6, 41, 32, 1264);
+    			attr_dev(p, "class", "list-item left");
+    			add_location(p, file$6, 45, 32, 1438);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, p, anchor);
@@ -2444,14 +2445,14 @@ var app = (function () {
     		block,
     		id: create_if_block_2.name,
     		type: "if",
-    		source: "(41:28) {#if i <= Math.ceil(chaps.length/2)}",
+    		source: "(45:28) {#if i <= Math.ceil(chaps.length/2)}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (40:24) {#each chaps as chap, i}
+    // (44:24) {#each chaps as chap, i}
     function create_each_block_1(ctx) {
     	let show_if = /*i*/ ctx[6] <= Math.ceil(/*chaps*/ ctx[2].length / 2);
     	let if_block_anchor;
@@ -2492,14 +2493,14 @@ var app = (function () {
     		block,
     		id: create_each_block_1.name,
     		type: "each",
-    		source: "(40:24) {#each chaps as chap, i}",
+    		source: "(44:24) {#each chaps as chap, i}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (48:28) {#if i >= Math.ceil(chaps.length/2)}
+    // (52:28) {#if i >= Math.ceil(chaps.length/2)}
     function create_if_block_1(ctx) {
     	let p;
     	let t_value = /*chap*/ ctx[4] + "";
@@ -2509,7 +2510,8 @@ var app = (function () {
     		c: function create() {
     			p = element("p");
     			t = text(t_value);
-    			add_location(p, file$6, 48, 32, 1565);
+    			attr_dev(p, "class", "list-item right");
+    			add_location(p, file$6, 52, 32, 1762);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, p, anchor);
@@ -2527,14 +2529,14 @@ var app = (function () {
     		block,
     		id: create_if_block_1.name,
     		type: "if",
-    		source: "(48:28) {#if i >= Math.ceil(chaps.length/2)}",
+    		source: "(52:28) {#if i >= Math.ceil(chaps.length/2)}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (47:24) {#each chaps as chap, i}
+    // (51:24) {#each chaps as chap, i}
     function create_each_block$4(ctx) {
     	let show_if = /*i*/ ctx[6] >= Math.ceil(/*chaps*/ ctx[2].length / 2);
     	let if_block_anchor;
@@ -2575,14 +2577,14 @@ var app = (function () {
     		block,
     		id: create_each_block$4.name,
     		type: "each",
-    		source: "(47:24) {#each chaps as chap, i}",
+    		source: "(51:24) {#each chaps as chap, i}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (34:25)                   <p>loading</p>          {:then _}
+    // (38:25)                   <p>loading</p>          {:then _}
     function create_pending_block$4(ctx) {
     	let p;
 
@@ -2590,7 +2592,7 @@ var app = (function () {
     		c: function create() {
     			p = element("p");
     			p.textContent = "loading";
-    			add_location(p, file$6, 34, 16, 986);
+    			add_location(p, file$6, 38, 16, 1160);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, p, anchor);
@@ -2605,7 +2607,7 @@ var app = (function () {
     		block,
     		id: create_pending_block$4.name,
     		type: "pending",
-    		source: "(34:25)                   <p>loading</p>          {:then _}",
+    		source: "(38:25)                   <p>loading</p>          {:then _}",
     		ctx
     	});
 
@@ -2615,7 +2617,7 @@ var app = (function () {
     function create_fragment$6(ctx) {
     	let div1;
     	let div0;
-    	let h3;
+    	let h2;
     	let t0_value = /*book*/ ctx[0].name + "";
     	let t0;
     	let t1;
@@ -2625,15 +2627,16 @@ var app = (function () {
     		c: function create() {
     			div1 = element("div");
     			div0 = element("div");
-    			h3 = element("h3");
+    			h2 = element("h2");
     			t0 = text(t0_value);
     			t1 = space();
     			if (if_block) if_block.c();
-    			add_location(h3, file$6, 29, 8, 849);
+    			attr_dev(h2, "class", "svelte-1me9ro");
+    			add_location(h2, file$6, 33, 8, 1023);
     			attr_dev(div0, "class", "title");
-    			add_location(div0, file$6, 28, 4, 820);
-    			attr_dev(div1, "class", "book");
-    			add_location(div1, file$6, 27, 0, 796);
+    			add_location(div0, file$6, 32, 4, 994);
+    			attr_dev(div1, "class", "book svelte-1me9ro");
+    			add_location(div1, file$6, 31, 0, 970);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -2641,8 +2644,8 @@ var app = (function () {
     		m: function mount(target, anchor) {
     			insert_dev(target, div1, anchor);
     			append_dev(div1, div0);
-    			append_dev(div0, h3);
-    			append_dev(h3, t0);
+    			append_dev(div0, h2);
+    			append_dev(h2, t0);
     			append_dev(div1, t1);
     			if (if_block) if_block.m(div1, null);
     		},
@@ -2691,6 +2694,12 @@ var app = (function () {
     	onMount(async function () {
     		if (localStorage.getItem(`bookID-${book._id}`)) {
     			$$invalidate(1, chapters = JSON.parse(localStorage.getItem(`bookID-${book._id}`)));
+
+    			$$invalidate(2, chaps = chapters.map(chap => {
+    				return chap.chapterName = ParseString$1.removeUselessSpace(chap.chapterName);
+    			}));
+
+    			return;
     		}
 
     		await fetch(`${{"env":{"API_TOKEN":"_tsiQCD03OC_GV6s3qJk","API_URL":"https://the-one-api.dev/v2"}}.env.API_URL}/book/${book._id}/chapter`).then(resp => resp.json()).then(data => {
@@ -2772,7 +2781,7 @@ var app = (function () {
     	return child_ctx;
     }
 
-    // (23:4) {#if books !== undefined}
+    // (24:4) {#if books !== undefined}
     function create_if_block$3(ctx) {
     	let await_block_anchor;
     	let promise;
@@ -2839,7 +2848,7 @@ var app = (function () {
     		block,
     		id: create_if_block$3.name,
     		type: "if",
-    		source: "(23:4) {#if books !== undefined}",
+    		source: "(24:4) {#if books !== undefined}",
     		ctx
     	});
 
@@ -2868,7 +2877,7 @@ var app = (function () {
     	return block;
     }
 
-    // (26:12) {:then books}
+    // (27:12) {:then books}
     function create_then_block$3(ctx) {
     	let each_1_anchor;
     	let current;
@@ -2957,14 +2966,14 @@ var app = (function () {
     		block,
     		id: create_then_block$3.name,
     		type: "then",
-    		source: "(26:12) {:then books}",
+    		source: "(27:12) {:then books}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (27:12) {#each books as book}
+    // (28:16) {#each books as book}
     function create_each_block$3(ctx) {
     	let singlebook;
     	let current;
@@ -3005,14 +3014,14 @@ var app = (function () {
     		block,
     		id: create_each_block$3.name,
     		type: "each",
-    		source: "(27:12) {#each books as book}",
+    		source: "(28:16) {#each books as book}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (24:22)               <p>Loading</p>              {:then books}
+    // (25:22)               <p>Loading</p>              {:then books}
     function create_pending_block$3(ctx) {
     	let p;
 
@@ -3020,7 +3029,7 @@ var app = (function () {
     		c: function create() {
     			p = element("p");
     			p.textContent = "Loading";
-    			add_location(p, file$5, 24, 12, 639);
+    			add_location(p, file$5, 25, 12, 649);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, p, anchor);
@@ -3037,7 +3046,7 @@ var app = (function () {
     		block,
     		id: create_pending_block$3.name,
     		type: "pending",
-    		source: "(24:22)               <p>Loading</p>              {:then books}",
+    		source: "(25:22)               <p>Loading</p>              {:then books}",
     		ctx
     	});
 
@@ -3046,19 +3055,20 @@ var app = (function () {
 
     function create_fragment$5(ctx) {
     	let main;
-    	let h1;
-    	let t1;
+    	let div;
+    	let t;
     	let current;
     	let if_block = /*books*/ ctx[0] !== undefined && create_if_block$3(ctx);
 
     	const block = {
     		c: function create() {
     			main = element("main");
-    			h1 = element("h1");
-    			h1.textContent = "Beyond Wonderland";
-    			t1 = space();
+    			div = element("div");
+    			t = space();
     			if (if_block) if_block.c();
-    			add_location(h1, file$5, 21, 4, 544);
+    			attr_dev(div, "class", "background svelte-12namml");
+    			add_location(div, file$5, 21, 4, 544);
+    			attr_dev(main, "class", "svelte-12namml");
     			add_location(main, file$5, 20, 0, 532);
     		},
     		l: function claim(nodes) {
@@ -3066,8 +3076,8 @@ var app = (function () {
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, main, anchor);
-    			append_dev(main, h1);
-    			append_dev(main, t1);
+    			append_dev(main, div);
+    			append_dev(main, t);
     			if (if_block) if_block.m(main, null);
     			current = true;
     		},
@@ -4712,14 +4722,14 @@ var app = (function () {
     			create_component(route3.$$.fragment);
     			t8 = space();
     			create_component(route4.$$.fragment);
-    			attr_dev(span, "class", "svelte-owz5y5");
+    			attr_dev(span, "class", "svelte-8nbey8");
     			add_location(span, file, 12, 8, 451);
-    			attr_dev(nav, "class", "svelte-owz5y5");
+    			attr_dev(nav, "class", "svelte-8nbey8");
     			add_location(nav, file, 13, 8, 507);
-    			attr_dev(header, "class", "svelte-owz5y5");
+    			attr_dev(header, "class", "svelte-8nbey8");
     			add_location(header, file, 11, 4, 433);
     			add_location(div, file, 22, 8, 757);
-    			attr_dev(main, "class", "svelte-owz5y5");
+    			attr_dev(main, "class", "svelte-8nbey8");
     			add_location(main, file, 21, 4, 741);
     		},
     		m: function mount(target, anchor) {
