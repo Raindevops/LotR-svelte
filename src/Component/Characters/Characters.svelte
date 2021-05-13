@@ -14,8 +14,8 @@
 
         if (localStorage.getItem("characters")) {
             datas = JSON.parse(localStorage.getItem("characters"));
-            raceAr = distinctArray(datas).race;
-            realmAr = distinctArray(datas).realm;
+            raceAr = fillSelects(datas).race;
+            realmAr = fillSelects(datas).realm;
             return;
         }
 
@@ -33,7 +33,7 @@
 
     });
 
-    const distinctArray = datas => {
+    const fillSelects = datas => {
         let raceArr = [];
         let realmArr = [];
         datas.map(d => {
@@ -70,8 +70,14 @@
                 array.push(el)
             }
         });
-        console.log(array);
+        raceAr = fillSelects(array).race;
+        realmAr = fillSelects(array).realm;
         return clone = array;
+    }
+
+    const resetSelects = () => {
+        raceAr = fillSelects(datas).race;
+        realmAr = fillSelects(datas).realm;
     }
     
 </script>
@@ -89,11 +95,14 @@
                         <option value={race}>{race}</option>
                     {/each}
                 </select>
-                <select value={realm} name="realm"  on:change={onSelectChange.bind(realm)}>
-                    {#each realmAr as realm}
-                        <option value={realm}>{realm}</option>
-                    {/each}
-                </select>
+                {#if realmAr.length > 0}
+                    <select value={realm} name="realm"  on:change={onSelectChange.bind(realm)}>
+                        {#each realmAr as realm}
+                            <option value={realm}>{realm}</option>
+                        {/each}
+                    </select>
+                {/if}
+                <button on:click={resetSelects}>Reset filters</button>
             </div>
 
             {#each clone as character }
