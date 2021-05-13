@@ -1,7 +1,9 @@
 <script>
     import {onMount} from "svelte";
     import SingleCharacter from "./SingleCharacter.svelte"
-    let characters = []
+    let datas = [];
+    let clone = [];
+
     let raceAr = [];
     let realmAr = [];
 
@@ -11,9 +13,9 @@
     onMount(async function () {
 
         if (localStorage.getItem("characters")) {
-            characters = JSON.parse(localStorage.getItem("characters"));
-            raceAr = distinctArray(characters).race;
-            realmAr = distinctArray(characters).realm;
+            datas = JSON.parse(localStorage.getItem("characters"));
+            raceAr = distinctArray(datas).race;
+            realmAr = distinctArray(datas).realm;
             return;
         }
 
@@ -25,31 +27,20 @@
         })
         .then(response => response.json())
         .then(data => {
-            characters = data.docs;
+            datas = data.docs;
             localStorage.setItem("characters", JSON.stringify(data.docs));
         });
 
-    })
+    });
 
     const distinctArray = datas => {
         let raceArr = [];
         let realmArr = [];
         datas.map(d => {
-            if (d.race.indexOf(",") > -1) {
-                let dts = d.race.split(",");
-                dts.map(el => {
-                    !raceArr.includes(el) ? raceArr.push(el) : false;
-                });                
-            }else if (!raceArr.includes(d.race) && (d.race !== "NaN" && d.race.length > 0)) {
+            if (!raceArr.includes(d.race) && (d.race !== "NaN" && d.race.length > 0)) {
                 raceArr.push(d.race);
             }
-            
-            if (d.realm.indexOf(",") > -1){
-                let dts = d.realm.split(",");
-                dts.map(el=>{
-                    !realmArr.includes(el) ? realmArr.push(el) : false;
-                });
-            } else if (!realmArr.includes(d.realm) && (d.realm !== "NaN" && d.realm.length > 0)) {
+            if (!realmArr.includes(d.realm) && (d.realm !== "NaN" && d.realm.length > 0)) {
                 realmArr.push(d.realm);
             }
         });
@@ -68,29 +59,46 @@
         });
         return datas;
     }
+
+    const onSelectChange = _ => {
+        let array = [];
+        datas.map(el => {
+            if (el.race === _.target.value) {
+                array.push(el);
+            }
+            if (el.realm === _.target.value){
+                array.push(el)
+            }
+        });
+        console.log(array);
+        return clone = array;
+    }
     
 </script>
 
 <main>
     <h1>Characters section</h1>
     
-    {#if characters}
-        {#await characters}
+    {#if datas}
+        {#await datas}
             <p>Is loading</p>
-            {:then characters} 
+            {:then datas} 
             <div class="character-research">
-                <select value={race} name="race">
-                    {#each raceAr as race }
+                <select value={race} name="race" on:change={onSelectChange.bind(race)}>
+                    {#each raceAr as race}
                         <option value={race}>{race}</option>
                     {/each}
                 </select>
-                <select value={realm} name="realm">
-                    {#each realmAr as realm }
+                <select value={realm} name="realm"  on:change={onSelectChange.bind(realm)}>
+                    {#each realmAr as realm}
                         <option value={realm}>{realm}</option>
                     {/each}
                 </select>
             </div>
-            <!-- <SingleCharacter character={character}/> -->
+
+            {#each clone as character }
+                <SingleCharacter character={character}/>
+            {/each}
         {/await}
     {/if}
 </main>

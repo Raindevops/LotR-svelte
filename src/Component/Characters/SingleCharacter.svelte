@@ -6,7 +6,7 @@
     <h3><a href={character.wikiUrl}>{character.name}</a></h3>
     <ul>
         {#each Object.entries(character) as [key, val] }
-            {#if val && key !== "_id" && key !== "wikiUrl" && key !=="name"}
+            {#if val && key !== "_id" && key !== "wikiUrl" && key !=="name" && val !== "NaN"}
                 <li>
                     <span class="key">{key} :</span>  
                     <span class="val">{val}</span>
