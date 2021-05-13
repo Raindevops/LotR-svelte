@@ -32,6 +32,10 @@ h3{
 	font-size: 3em;
 }
 
+.content{
+	width: 768px;
+	margin: 0 auto;
+}
 
 a {
 	color: rgb(0,100,200);

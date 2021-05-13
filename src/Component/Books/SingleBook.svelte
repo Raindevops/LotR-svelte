@@ -73,8 +73,6 @@
     }
     .content{
         text-align: left;
-        max-width: 768px;
-        margin: 0 auto;
         table{
             td{
                 vertical-align: top;
