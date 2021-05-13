@@ -2,6 +2,8 @@
     import {onMount} from "svelte";
     import SingleCharacter from "./SingleCharacter.svelte"
     let characters = []
+    let raceAr = [];
+    let realmAr = [];
 
     let race;
     let realm;
@@ -10,7 +12,8 @@
 
         if (localStorage.getItem("characters")) {
             characters = JSON.parse(localStorage.getItem("characters"));
-            distinctArray(characters);
+            raceAr = distinctArray(characters).race;
+            realmAr = distinctArray(characters).realm;
             return;
         }
 
@@ -50,8 +53,11 @@
                 realmArr.push(d.realm);
             }
         });
-        console.log(raceArr)
-        console.log(realmArr)
+        
+        return {
+            "race": raceArr,
+            "realm": realmArr
+        }
     }
     
 </script>
@@ -65,17 +71,13 @@
             {:then characters} 
             <div class="character-research">
                 <select value={race} name="race">
-                    {#each characters as character }
-                        <option value={character.race}>
-                            {character.race}
-                        </option>
+                    {#each raceAr as race }
+                        <option value={race}>{race}</option>
                     {/each}
                 </select>
                 <select value={realm} name="realm">
-                    {#each characters as character }
-                        <option value={character.realm}>
-                            {character.realm}
-                        </option>
+                    {#each realmAr as realm }
+                        <option value={realm}>{realm}</option>
                     {/each}
                 </select>
             </div>
