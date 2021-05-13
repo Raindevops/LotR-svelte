@@ -4348,7 +4348,7 @@ var app = (function () {
     	return child_ctx;
     }
 
-    // (68:4) {#if characters}
+    // (77:4) {#if characters}
     function create_if_block(ctx) {
     	let await_block_anchor;
     	let promise;
@@ -4399,7 +4399,7 @@ var app = (function () {
     		block,
     		id: create_if_block.name,
     		type: "if",
-    		source: "(68:4) {#if characters}",
+    		source: "(77:4) {#if characters}",
     		ctx
     	});
 
@@ -4421,7 +4421,7 @@ var app = (function () {
     	return block;
     }
 
-    // (71:12) {:then characters}
+    // (80:12) {:then characters}
     function create_then_block(ctx) {
     	let div;
     	let select0;
@@ -4460,11 +4460,11 @@ var app = (function () {
     			}
 
     			attr_dev(select0, "name", "race");
-    			add_location(select0, file$2, 72, 16, 2200);
+    			add_location(select0, file$2, 81, 16, 2453);
     			attr_dev(select1, "name", "realm");
-    			add_location(select1, file$2, 77, 16, 2414);
+    			add_location(select1, file$2, 86, 16, 2667);
     			attr_dev(div, "class", "character-research");
-    			add_location(div, file$2, 71, 12, 2150);
+    			add_location(div, file$2, 80, 12, 2403);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -4544,14 +4544,14 @@ var app = (function () {
     		block,
     		id: create_then_block.name,
     		type: "then",
-    		source: "(71:12) {:then characters}",
+    		source: "(80:12) {:then characters}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (74:20) {#each raceAr as race }
+    // (83:20) {#each raceAr as race }
     function create_each_block_1(ctx) {
     	let option;
     	let t_value = /*race*/ ctx[3] + "";
@@ -4564,7 +4564,7 @@ var app = (function () {
     			t = text(t_value);
     			option.__value = option_value_value = /*race*/ ctx[3];
     			option.value = option.__value;
-    			add_location(option, file$2, 74, 24, 2304);
+    			add_location(option, file$2, 83, 24, 2557);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, option, anchor);
@@ -4587,14 +4587,14 @@ var app = (function () {
     		block,
     		id: create_each_block_1.name,
     		type: "each",
-    		source: "(74:20) {#each raceAr as race }",
+    		source: "(83:20) {#each raceAr as race }",
     		ctx
     	});
 
     	return block;
     }
 
-    // (79:20) {#each realmAr as realm }
+    // (88:20) {#each realmAr as realm }
     function create_each_block(ctx) {
     	let option;
     	let t_value = /*realm*/ ctx[4] + "";
@@ -4607,7 +4607,7 @@ var app = (function () {
     			t = text(t_value);
     			option.__value = option_value_value = /*realm*/ ctx[4];
     			option.value = option.__value;
-    			add_location(option, file$2, 79, 24, 2522);
+    			add_location(option, file$2, 88, 24, 2775);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, option, anchor);
@@ -4630,14 +4630,14 @@ var app = (function () {
     		block,
     		id: create_each_block.name,
     		type: "each",
-    		source: "(79:20) {#each realmAr as realm }",
+    		source: "(88:20) {#each realmAr as realm }",
     		ctx
     	});
 
     	return block;
     }
 
-    // (69:27)               <p>Is loading</p>              {:then characters}
+    // (78:27)               <p>Is loading</p>              {:then characters}
     function create_pending_block(ctx) {
     	let p;
 
@@ -4645,7 +4645,7 @@ var app = (function () {
     		c: function create() {
     			p = element("p");
     			p.textContent = "Is loading";
-    			add_location(p, file$2, 69, 12, 2086);
+    			add_location(p, file$2, 78, 12, 2339);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, p, anchor);
@@ -4660,7 +4660,7 @@ var app = (function () {
     		block,
     		id: create_pending_block.name,
     		type: "pending",
-    		source: "(69:27)               <p>Is loading</p>              {:then characters}",
+    		source: "(78:27)               <p>Is loading</p>              {:then characters}",
     		ctx
     	});
 
@@ -4680,8 +4680,8 @@ var app = (function () {
     			h1.textContent = "Characters section";
     			t1 = space();
     			if (if_block) if_block.c();
-    			add_location(h1, file$2, 65, 4, 1988);
-    			add_location(main, file$2, 64, 0, 1976);
+    			add_location(h1, file$2, 74, 4, 2241);
+    			add_location(main, file$2, 73, 0, 2229);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -4754,8 +4754,8 @@ var app = (function () {
     	});
 
     	const distinctArray = datas => {
-    		const raceArr = [];
-    		const realmArr = [];
+    		let raceArr = [];
+    		let realmArr = [];
 
     		datas.map(d => {
     			if (d.race.indexOf(",") > -1) {
@@ -4779,7 +4779,23 @@ var app = (function () {
     			}
     		});
 
+    		raceArr = sortDatas(raceArr);
+    		realmArr = sortDatas(realmArr);
     		return { "race": raceArr, "realm": realmArr };
+    	};
+
+    	const sortDatas = datas => {
+    		datas.sort(function (a, b) {
+    			if (a > b) {
+    				return 1;
+    			}
+
+    			if (a < b) {
+    				return -1;
+    			}
+    		});
+
+    		return datas;
     	};
 
     	const writable_props = [];
@@ -4796,7 +4812,8 @@ var app = (function () {
     		realmAr,
     		race,
     		realm,
-    		distinctArray
+    		distinctArray,
+    		sortDatas
     	});
 
     	$$self.$inject_state = $$props => {

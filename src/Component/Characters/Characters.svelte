@@ -32,8 +32,8 @@
     })
 
     const distinctArray = datas => {
-        const raceArr = [];
-        const realmArr = [];
+        let raceArr = [];
+        let realmArr = [];
         datas.map(d => {
             if (d.race.indexOf(",") > -1) {
                 let dts = d.race.split(",");
@@ -53,11 +53,20 @@
                 realmArr.push(d.realm);
             }
         });
-        
+        raceArr = sortDatas(raceArr);
+        realmArr = sortDatas(realmArr);
         return {
             "race": raceArr,
             "realm": realmArr
         }
+    }
+
+    const sortDatas = (datas) => {
+        datas.sort(function(a,b){
+            if (a > b) {return 1}
+            if (a < b) {return -1}
+        });
+        return datas;
     }
     
 </script>
