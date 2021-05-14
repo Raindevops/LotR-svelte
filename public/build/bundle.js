@@ -4091,7 +4091,7 @@ var app = (function () {
     			span1 = element("span");
     			t3 = text(t3_value);
     			t4 = space();
-    			attr_dev(span0, "class", "key svelte-13xtoe6");
+    			attr_dev(span0, "class", "key svelte-nmo4cs");
     			add_location(span0, file$3, 10, 20, 343);
     			attr_dev(span1, "class", "val");
     			add_location(span1, file$3, 11, 20, 399);
@@ -4203,13 +4203,13 @@ var app = (function () {
     			}
 
     			attr_dev(a, "href", a_href_value = /*character*/ ctx[0].wikiUrl);
-    			attr_dev(a, "class", "svelte-13xtoe6");
+    			attr_dev(a, "class", "svelte-nmo4cs");
     			add_location(a, file$3, 5, 8, 83);
-    			attr_dev(h3, "class", "svelte-13xtoe6");
+    			attr_dev(h3, "class", "svelte-nmo4cs");
     			add_location(h3, file$3, 5, 4, 79);
-    			attr_dev(ul, "class", "svelte-13xtoe6");
+    			attr_dev(ul, "class", "svelte-nmo4cs");
     			add_location(ul, file$3, 6, 4, 142);
-    			attr_dev(div, "class", "character svelte-13xtoe6");
+    			attr_dev(div, "class", "character svelte-nmo4cs");
     			add_location(div, file$3, 4, 0, 50);
     		},
     		l: function claim(nodes) {
@@ -4517,23 +4517,23 @@ var app = (function () {
     			button.textContent = "Reset filters";
     			t7 = space();
     			if (if_block) if_block.c();
-    			attr_dev(span0, "class", "svelte-1x9oxi9");
+    			attr_dev(span0, "class", "svelte-1hxxyan");
     			add_location(span0, file$2, 95, 24, 2639);
     			attr_dev(select0, "name", "race");
-    			attr_dev(select0, "class", "svelte-1x9oxi9");
+    			attr_dev(select0, "class", "svelte-1hxxyan");
     			add_location(select0, file$2, 96, 24, 2691);
-    			attr_dev(div0, "class", "character-research--race svelte-1x9oxi9");
+    			attr_dev(div0, "class", "character-research--race svelte-1hxxyan");
     			add_location(div0, file$2, 94, 20, 2575);
-    			attr_dev(span1, "class", "svelte-1x9oxi9");
-    			add_location(span1, file$2, 104, 28, 3134);
+    			attr_dev(span1, "class", "svelte-1hxxyan");
+    			add_location(span1, file$2, 103, 24, 3071);
     			attr_dev(select1, "name", "realm");
-    			attr_dev(select1, "class", "svelte-1x9oxi9");
-    			add_location(select1, file$2, 105, 28, 3191);
-    			attr_dev(div1, "class", "character-research--realm svelte-1x9oxi9");
-    			add_location(div1, file$2, 103, 24, 3065);
-    			attr_dev(button, "class", "svelte-1x9oxi9");
-    			add_location(button, file$2, 112, 20, 3570);
-    			attr_dev(div2, "class", "character-research svelte-1x9oxi9");
+    			attr_dev(select1, "class", "svelte-1hxxyan");
+    			add_location(select1, file$2, 104, 24, 3124);
+    			attr_dev(div1, "class", "character-research--realm svelte-1hxxyan");
+    			add_location(div1, file$2, 102, 20, 3006);
+    			attr_dev(button, "class", "svelte-1hxxyan");
+    			add_location(button, file$2, 110, 20, 3447);
+    			attr_dev(div2, "class", "character-research svelte-1hxxyan");
     			add_location(div2, file$2, 93, 16, 2521);
     			attr_dev(div3, "class", "content");
     			add_location(div3, file$2, 92, 12, 2482);
@@ -4723,7 +4723,7 @@ var app = (function () {
     	return block;
     }
 
-    // (107:32) {#each realmAr as realm}
+    // (106:28) {#each realmAr as realm}
     function create_each_block_1(ctx) {
     	let option;
     	let t_value = /*realm*/ ctx[7] + "";
@@ -4736,7 +4736,7 @@ var app = (function () {
     			t = text(t_value);
     			option.__value = option_value_value = /*realm*/ ctx[7];
     			option.value = option.__value;
-    			add_location(option, file$2, 107, 36, 3362);
+    			add_location(option, file$2, 106, 32, 3287);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, option, anchor);
@@ -4759,14 +4759,14 @@ var app = (function () {
     		block,
     		id: create_each_block_1.name,
     		type: "each",
-    		source: "(107:32) {#each realmAr as realm}",
+    		source: "(106:28) {#each realmAr as realm}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (116:16) {#if clone.length > 0}
+    // (114:16) {#if clone.length > 0}
     function create_if_block_1(ctx) {
     	let div;
     	let current;
@@ -4790,8 +4790,8 @@ var app = (function () {
     				each_blocks[i].c();
     			}
 
-    			attr_dev(div, "class", "characters");
-    			add_location(div, file$2, 116, 20, 3716);
+    			attr_dev(div, "class", "characters svelte-1hxxyan");
+    			add_location(div, file$2, 114, 20, 3593);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -4859,14 +4859,14 @@ var app = (function () {
     		block,
     		id: create_if_block_1.name,
     		type: "if",
-    		source: "(116:16) {#if clone.length > 0}",
+    		source: "(114:16) {#if clone.length > 0}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (118:24) {#each clone as character }
+    // (116:24) {#each clone as character }
     function create_each_block(ctx) {
     	let singlecharacter;
     	let current;
@@ -4907,7 +4907,7 @@ var app = (function () {
     		block,
     		id: create_each_block.name,
     		type: "each",
-    		source: "(118:24) {#each clone as character }",
+    		source: "(116:24) {#each clone as character }",
     		ctx
     	});
 

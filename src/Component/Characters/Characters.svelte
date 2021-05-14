@@ -100,16 +100,14 @@
                             {/each}
                         </select>
                     </div>
-                    <!-- {#if realmAr.length > 0} -->
-                        <div class="character-research--realm">
-                            <span>Select a realm</span>
-                            <select value={realm} name="realm"  on:change={onSelectChange.bind(realm)}>
-                                {#each realmAr as realm}
-                                    <option value={realm}>{realm}</option>
-                                {/each}
-                            </select>
-                        </div>
-                    <!-- {/if} -->
+                    <div class="character-research--realm">
+                        <span>Select a realm</span>
+                        <select value={realm} name="realm"  on:change={onSelectChange.bind(realm)}>
+                            {#each realmAr as realm}
+                                <option value={realm}>{realm}</option>
+                            {/each}
+                        </select>
+                    </div>
                     <button on:click={resetSelects}>Reset filters</button>
                 </div>
     
@@ -129,10 +127,11 @@
     $gold : #C4B479;
     .character-research{
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(2fr, 1fr);
         grid-gap: 1rem;
         align-items: end;
         text-align: left;
+        margin-bottom: 2rem;
         &--race{
             grid-column: 1;
         }&--realm{
@@ -150,5 +149,11 @@
         select{
             width: 100%;
         }
+    }
+    .characters{
+        display: grid;
+        grid-gap: 1rem;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        text-align: left;
     }
 </style>

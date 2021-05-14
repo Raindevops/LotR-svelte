@@ -29,6 +29,7 @@ $gold : #C4B479;
     ul{
         list-style: none;
         margin-left: 0;
+        padding-left: 0;
         li{
             .key{
                 text-transform: capitalize;
