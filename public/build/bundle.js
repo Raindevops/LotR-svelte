@@ -4354,7 +4354,7 @@ var app = (function () {
     	return child_ctx;
     }
 
-    // (88:4) {#if datas}
+    // (89:4) {#if datas}
     function create_if_block(ctx) {
     	let await_block_anchor;
     	let promise;
@@ -4421,7 +4421,7 @@ var app = (function () {
     		block,
     		id: create_if_block.name,
     		type: "if",
-    		source: "(88:4) {#if datas}",
+    		source: "(89:4) {#if datas}",
     		ctx
     	});
 
@@ -4450,15 +4450,22 @@ var app = (function () {
     	return block;
     }
 
-    // (91:12) {:then datas}
+    // (92:12) {:then datas}
     function create_then_block(ctx) {
-    	let div;
-    	let select;
-    	let t0;
+    	let div3;
+    	let div2;
+    	let div0;
+    	let span0;
     	let t1;
+    	let select0;
+    	let t2;
+    	let div1;
+    	let span1;
+    	let t4;
+    	let select1;
+    	let t5;
     	let button;
-    	let t3;
-    	let each1_anchor;
+    	let t7;
     	let current;
     	let mounted;
     	let dispose;
@@ -4470,71 +4477,101 @@ var app = (function () {
     		each_blocks_1[i] = create_each_block_2(get_each_context_2(ctx, each_value_2, i));
     	}
 
-    	let if_block = /*realmAr*/ ctx[2].length > 0 && create_if_block_1(ctx);
-    	let each_value = /*clone*/ ctx[0];
-    	validate_each_argument(each_value);
+    	let each_value_1 = /*realmAr*/ ctx[2];
+    	validate_each_argument(each_value_1);
     	let each_blocks = [];
 
-    	for (let i = 0; i < each_value.length; i += 1) {
-    		each_blocks[i] = create_each_block(get_each_context(ctx, each_value, i));
+    	for (let i = 0; i < each_value_1.length; i += 1) {
+    		each_blocks[i] = create_each_block_1(get_each_context_1(ctx, each_value_1, i));
     	}
 
-    	const out = i => transition_out(each_blocks[i], 1, 1, () => {
-    		each_blocks[i] = null;
-    	});
+    	let if_block = /*clone*/ ctx[0].length > 0 && create_if_block_1(ctx);
 
     	const block = {
     		c: function create() {
-    			div = element("div");
-    			select = element("select");
+    			div3 = element("div");
+    			div2 = element("div");
+    			div0 = element("div");
+    			span0 = element("span");
+    			span0.textContent = "Select a race";
+    			t1 = space();
+    			select0 = element("select");
 
     			for (let i = 0; i < each_blocks_1.length; i += 1) {
     				each_blocks_1[i].c();
     			}
 
-    			t0 = space();
-    			if (if_block) if_block.c();
-    			t1 = space();
-    			button = element("button");
-    			button.textContent = "Reset filters";
-    			t3 = space();
+    			t2 = space();
+    			div1 = element("div");
+    			span1 = element("span");
+    			span1.textContent = "Select a realm";
+    			t4 = space();
+    			select1 = element("select");
 
     			for (let i = 0; i < each_blocks.length; i += 1) {
     				each_blocks[i].c();
     			}
 
-    			each1_anchor = empty();
-    			attr_dev(select, "name", "race");
-    			add_location(select, file$2, 92, 16, 2504);
-    			add_location(button, file$2, 104, 16, 3099);
-    			attr_dev(div, "class", "character-research");
-    			add_location(div, file$2, 91, 12, 2454);
+    			t5 = space();
+    			button = element("button");
+    			button.textContent = "Reset filters";
+    			t7 = space();
+    			if (if_block) if_block.c();
+    			attr_dev(span0, "class", "svelte-1x9oxi9");
+    			add_location(span0, file$2, 95, 24, 2639);
+    			attr_dev(select0, "name", "race");
+    			attr_dev(select0, "class", "svelte-1x9oxi9");
+    			add_location(select0, file$2, 96, 24, 2691);
+    			attr_dev(div0, "class", "character-research--race svelte-1x9oxi9");
+    			add_location(div0, file$2, 94, 20, 2575);
+    			attr_dev(span1, "class", "svelte-1x9oxi9");
+    			add_location(span1, file$2, 104, 28, 3134);
+    			attr_dev(select1, "name", "realm");
+    			attr_dev(select1, "class", "svelte-1x9oxi9");
+    			add_location(select1, file$2, 105, 28, 3191);
+    			attr_dev(div1, "class", "character-research--realm svelte-1x9oxi9");
+    			add_location(div1, file$2, 103, 24, 3065);
+    			attr_dev(button, "class", "svelte-1x9oxi9");
+    			add_location(button, file$2, 112, 20, 3570);
+    			attr_dev(div2, "class", "character-research svelte-1x9oxi9");
+    			add_location(div2, file$2, 93, 16, 2521);
+    			attr_dev(div3, "class", "content");
+    			add_location(div3, file$2, 92, 12, 2482);
     		},
     		m: function mount(target, anchor) {
-    			insert_dev(target, div, anchor);
-    			append_dev(div, select);
+    			insert_dev(target, div3, anchor);
+    			append_dev(div3, div2);
+    			append_dev(div2, div0);
+    			append_dev(div0, span0);
+    			append_dev(div0, t1);
+    			append_dev(div0, select0);
 
     			for (let i = 0; i < each_blocks_1.length; i += 1) {
-    				each_blocks_1[i].m(select, null);
+    				each_blocks_1[i].m(select0, null);
     			}
 
-    			select_option(select, /*race*/ ctx[6]);
-    			append_dev(div, t0);
-    			if (if_block) if_block.m(div, null);
-    			append_dev(div, t1);
-    			append_dev(div, button);
-    			insert_dev(target, t3, anchor);
+    			select_option(select0, /*race*/ ctx[6]);
+    			append_dev(div2, t2);
+    			append_dev(div2, div1);
+    			append_dev(div1, span1);
+    			append_dev(div1, t4);
+    			append_dev(div1, select1);
 
     			for (let i = 0; i < each_blocks.length; i += 1) {
-    				each_blocks[i].m(target, anchor);
+    				each_blocks[i].m(select1, null);
     			}
 
-    			insert_dev(target, each1_anchor, anchor);
+    			select_option(select1, /*realm*/ ctx[7]);
+    			append_dev(div2, t5);
+    			append_dev(div2, button);
+    			append_dev(div3, t7);
+    			if (if_block) if_block.m(div3, null);
     			current = true;
 
     			if (!mounted) {
     				dispose = [
-    					listen_dev(select, "change", /*onSelectChange*/ ctx[4].bind(/*race*/ ctx[6]), false, false, false),
+    					listen_dev(select0, "change", /*onSelectChange*/ ctx[4].bind(/*race*/ ctx[6]), false, false, false),
+    					listen_dev(select1, "change", /*onSelectChange*/ ctx[4].bind(/*realm*/ ctx[7]), false, false, false),
     					listen_dev(button, "click", /*resetSelects*/ ctx[5], false, false, false)
     				];
 
@@ -4555,7 +4592,7 @@ var app = (function () {
     					} else {
     						each_blocks_1[i] = create_each_block_2(child_ctx);
     						each_blocks_1[i].c();
-    						each_blocks_1[i].m(select, null);
+    						each_blocks_1[i].m(select0, null);
     					}
     				}
 
@@ -4566,19 +4603,206 @@ var app = (function () {
     				each_blocks_1.length = each_value_2.length;
     			}
 
-    			if (/*realmAr*/ ctx[2].length > 0) {
+    			if (dirty & /*realmAr*/ 4) {
+    				each_value_1 = /*realmAr*/ ctx[2];
+    				validate_each_argument(each_value_1);
+    				let i;
+
+    				for (i = 0; i < each_value_1.length; i += 1) {
+    					const child_ctx = get_each_context_1(ctx, each_value_1, i);
+
+    					if (each_blocks[i]) {
+    						each_blocks[i].p(child_ctx, dirty);
+    					} else {
+    						each_blocks[i] = create_each_block_1(child_ctx);
+    						each_blocks[i].c();
+    						each_blocks[i].m(select1, null);
+    					}
+    				}
+
+    				for (; i < each_blocks.length; i += 1) {
+    					each_blocks[i].d(1);
+    				}
+
+    				each_blocks.length = each_value_1.length;
+    			}
+
+    			if (/*clone*/ ctx[0].length > 0) {
     				if (if_block) {
     					if_block.p(ctx, dirty);
+
+    					if (dirty & /*clone*/ 1) {
+    						transition_in(if_block, 1);
+    					}
     				} else {
     					if_block = create_if_block_1(ctx);
     					if_block.c();
-    					if_block.m(div, t1);
+    					transition_in(if_block, 1);
+    					if_block.m(div3, null);
     				}
     			} else if (if_block) {
-    				if_block.d(1);
-    				if_block = null;
+    				group_outros();
+
+    				transition_out(if_block, 1, 1, () => {
+    					if_block = null;
+    				});
+
+    				check_outros();
+    			}
+    		},
+    		i: function intro(local) {
+    			if (current) return;
+    			transition_in(if_block);
+    			current = true;
+    		},
+    		o: function outro(local) {
+    			transition_out(if_block);
+    			current = false;
+    		},
+    		d: function destroy(detaching) {
+    			if (detaching) detach_dev(div3);
+    			destroy_each(each_blocks_1, detaching);
+    			destroy_each(each_blocks, detaching);
+    			if (if_block) if_block.d();
+    			mounted = false;
+    			run_all(dispose);
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_then_block.name,
+    		type: "then",
+    		source: "(92:12) {:then datas}",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    // (98:28) {#each raceAr as race}
+    function create_each_block_2(ctx) {
+    	let option;
+    	let t_value = /*race*/ ctx[6] + "";
+    	let t;
+    	let option_value_value;
+
+    	const block = {
+    		c: function create() {
+    			option = element("option");
+    			t = text(t_value);
+    			option.__value = option_value_value = /*race*/ ctx[6];
+    			option.value = option.__value;
+    			add_location(option, file$2, 98, 32, 2848);
+    		},
+    		m: function mount(target, anchor) {
+    			insert_dev(target, option, anchor);
+    			append_dev(option, t);
+    		},
+    		p: function update(ctx, dirty) {
+    			if (dirty & /*raceAr*/ 2 && t_value !== (t_value = /*race*/ ctx[6] + "")) set_data_dev(t, t_value);
+
+    			if (dirty & /*raceAr*/ 2 && option_value_value !== (option_value_value = /*race*/ ctx[6])) {
+    				prop_dev(option, "__value", option_value_value);
+    				option.value = option.__value;
+    			}
+    		},
+    		d: function destroy(detaching) {
+    			if (detaching) detach_dev(option);
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_each_block_2.name,
+    		type: "each",
+    		source: "(98:28) {#each raceAr as race}",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    // (107:32) {#each realmAr as realm}
+    function create_each_block_1(ctx) {
+    	let option;
+    	let t_value = /*realm*/ ctx[7] + "";
+    	let t;
+    	let option_value_value;
+
+    	const block = {
+    		c: function create() {
+    			option = element("option");
+    			t = text(t_value);
+    			option.__value = option_value_value = /*realm*/ ctx[7];
+    			option.value = option.__value;
+    			add_location(option, file$2, 107, 36, 3362);
+    		},
+    		m: function mount(target, anchor) {
+    			insert_dev(target, option, anchor);
+    			append_dev(option, t);
+    		},
+    		p: function update(ctx, dirty) {
+    			if (dirty & /*realmAr*/ 4 && t_value !== (t_value = /*realm*/ ctx[7] + "")) set_data_dev(t, t_value);
+
+    			if (dirty & /*realmAr*/ 4 && option_value_value !== (option_value_value = /*realm*/ ctx[7])) {
+    				prop_dev(option, "__value", option_value_value);
+    				option.value = option.__value;
+    			}
+    		},
+    		d: function destroy(detaching) {
+    			if (detaching) detach_dev(option);
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_each_block_1.name,
+    		type: "each",
+    		source: "(107:32) {#each realmAr as realm}",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    // (116:16) {#if clone.length > 0}
+    function create_if_block_1(ctx) {
+    	let div;
+    	let current;
+    	let each_value = /*clone*/ ctx[0];
+    	validate_each_argument(each_value);
+    	let each_blocks = [];
+
+    	for (let i = 0; i < each_value.length; i += 1) {
+    		each_blocks[i] = create_each_block(get_each_context(ctx, each_value, i));
+    	}
+
+    	const out = i => transition_out(each_blocks[i], 1, 1, () => {
+    		each_blocks[i] = null;
+    	});
+
+    	const block = {
+    		c: function create() {
+    			div = element("div");
+
+    			for (let i = 0; i < each_blocks.length; i += 1) {
+    				each_blocks[i].c();
     			}
 
+    			attr_dev(div, "class", "characters");
+    			add_location(div, file$2, 116, 20, 3716);
+    		},
+    		m: function mount(target, anchor) {
+    			insert_dev(target, div, anchor);
+
+    			for (let i = 0; i < each_blocks.length; i += 1) {
+    				each_blocks[i].m(div, null);
+    			}
+
+    			current = true;
+    		},
+    		p: function update(ctx, dirty) {
     			if (dirty & /*clone*/ 1) {
     				each_value = /*clone*/ ctx[0];
     				validate_each_argument(each_value);
@@ -4594,7 +4818,7 @@ var app = (function () {
     						each_blocks[i] = create_each_block(child_ctx);
     						each_blocks[i].c();
     						transition_in(each_blocks[i], 1);
-    						each_blocks[i].m(each1_anchor.parentNode, each1_anchor);
+    						each_blocks[i].m(div, null);
     					}
     				}
 
@@ -4627,138 +4851,7 @@ var app = (function () {
     		},
     		d: function destroy(detaching) {
     			if (detaching) detach_dev(div);
-    			destroy_each(each_blocks_1, detaching);
-    			if (if_block) if_block.d();
-    			if (detaching) detach_dev(t3);
     			destroy_each(each_blocks, detaching);
-    			if (detaching) detach_dev(each1_anchor);
-    			mounted = false;
-    			run_all(dispose);
-    		}
-    	};
-
-    	dispatch_dev("SvelteRegisterBlock", {
-    		block,
-    		id: create_then_block.name,
-    		type: "then",
-    		source: "(91:12) {:then datas}",
-    		ctx
-    	});
-
-    	return block;
-    }
-
-    // (94:20) {#each raceAr as race}
-    function create_each_block_2(ctx) {
-    	let option;
-    	let t_value = /*race*/ ctx[6] + "";
-    	let t;
-    	let option_value_value;
-
-    	const block = {
-    		c: function create() {
-    			option = element("option");
-    			t = text(t_value);
-    			option.__value = option_value_value = /*race*/ ctx[6];
-    			option.value = option.__value;
-    			add_location(option, file$2, 94, 24, 2645);
-    		},
-    		m: function mount(target, anchor) {
-    			insert_dev(target, option, anchor);
-    			append_dev(option, t);
-    		},
-    		p: function update(ctx, dirty) {
-    			if (dirty & /*raceAr*/ 2 && t_value !== (t_value = /*race*/ ctx[6] + "")) set_data_dev(t, t_value);
-
-    			if (dirty & /*raceAr*/ 2 && option_value_value !== (option_value_value = /*race*/ ctx[6])) {
-    				prop_dev(option, "__value", option_value_value);
-    				option.value = option.__value;
-    			}
-    		},
-    		d: function destroy(detaching) {
-    			if (detaching) detach_dev(option);
-    		}
-    	};
-
-    	dispatch_dev("SvelteRegisterBlock", {
-    		block,
-    		id: create_each_block_2.name,
-    		type: "each",
-    		source: "(94:20) {#each raceAr as race}",
-    		ctx
-    	});
-
-    	return block;
-    }
-
-    // (98:16) {#if realmAr.length > 0}
-    function create_if_block_1(ctx) {
-    	let select;
-    	let mounted;
-    	let dispose;
-    	let each_value_1 = /*realmAr*/ ctx[2];
-    	validate_each_argument(each_value_1);
-    	let each_blocks = [];
-
-    	for (let i = 0; i < each_value_1.length; i += 1) {
-    		each_blocks[i] = create_each_block_1(get_each_context_1(ctx, each_value_1, i));
-    	}
-
-    	const block = {
-    		c: function create() {
-    			select = element("select");
-
-    			for (let i = 0; i < each_blocks.length; i += 1) {
-    				each_blocks[i].c();
-    			}
-
-    			attr_dev(select, "name", "realm");
-    			add_location(select, file$2, 98, 20, 2801);
-    		},
-    		m: function mount(target, anchor) {
-    			insert_dev(target, select, anchor);
-
-    			for (let i = 0; i < each_blocks.length; i += 1) {
-    				each_blocks[i].m(select, null);
-    			}
-
-    			select_option(select, /*realm*/ ctx[7]);
-
-    			if (!mounted) {
-    				dispose = listen_dev(select, "change", /*onSelectChange*/ ctx[4].bind(/*realm*/ ctx[7]), false, false, false);
-    				mounted = true;
-    			}
-    		},
-    		p: function update(ctx, dirty) {
-    			if (dirty & /*realmAr*/ 4) {
-    				each_value_1 = /*realmAr*/ ctx[2];
-    				validate_each_argument(each_value_1);
-    				let i;
-
-    				for (i = 0; i < each_value_1.length; i += 1) {
-    					const child_ctx = get_each_context_1(ctx, each_value_1, i);
-
-    					if (each_blocks[i]) {
-    						each_blocks[i].p(child_ctx, dirty);
-    					} else {
-    						each_blocks[i] = create_each_block_1(child_ctx);
-    						each_blocks[i].c();
-    						each_blocks[i].m(select, null);
-    					}
-    				}
-
-    				for (; i < each_blocks.length; i += 1) {
-    					each_blocks[i].d(1);
-    				}
-
-    				each_blocks.length = each_value_1.length;
-    			}
-    		},
-    		d: function destroy(detaching) {
-    			if (detaching) detach_dev(select);
-    			destroy_each(each_blocks, detaching);
-    			mounted = false;
-    			dispose();
     		}
     	};
 
@@ -4766,57 +4859,14 @@ var app = (function () {
     		block,
     		id: create_if_block_1.name,
     		type: "if",
-    		source: "(98:16) {#if realmAr.length > 0}",
+    		source: "(116:16) {#if clone.length > 0}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (100:24) {#each realmAr as realm}
-    function create_each_block_1(ctx) {
-    	let option;
-    	let t_value = /*realm*/ ctx[7] + "";
-    	let t;
-    	let option_value_value;
-
-    	const block = {
-    		c: function create() {
-    			option = element("option");
-    			t = text(t_value);
-    			option.__value = option_value_value = /*realm*/ ctx[7];
-    			option.value = option.__value;
-    			add_location(option, file$2, 100, 28, 2956);
-    		},
-    		m: function mount(target, anchor) {
-    			insert_dev(target, option, anchor);
-    			append_dev(option, t);
-    		},
-    		p: function update(ctx, dirty) {
-    			if (dirty & /*realmAr*/ 4 && t_value !== (t_value = /*realm*/ ctx[7] + "")) set_data_dev(t, t_value);
-
-    			if (dirty & /*realmAr*/ 4 && option_value_value !== (option_value_value = /*realm*/ ctx[7])) {
-    				prop_dev(option, "__value", option_value_value);
-    				option.value = option.__value;
-    			}
-    		},
-    		d: function destroy(detaching) {
-    			if (detaching) detach_dev(option);
-    		}
-    	};
-
-    	dispatch_dev("SvelteRegisterBlock", {
-    		block,
-    		id: create_each_block_1.name,
-    		type: "each",
-    		source: "(100:24) {#each realmAr as realm}",
-    		ctx
-    	});
-
-    	return block;
-    }
-
-    // (108:12) {#each clone as character }
+    // (118:24) {#each clone as character }
     function create_each_block(ctx) {
     	let singlecharacter;
     	let current;
@@ -4857,14 +4907,14 @@ var app = (function () {
     		block,
     		id: create_each_block.name,
     		type: "each",
-    		source: "(108:12) {#each clone as character }",
+    		source: "(118:24) {#each clone as character }",
     		ctx
     	});
 
     	return block;
     }
 
-    // (89:22)               <p>Is loading</p>              {:then datas}
+    // (90:22)               <p>Is loading</p>              {:then datas}
     function create_pending_block(ctx) {
     	let p;
 
@@ -4872,7 +4922,7 @@ var app = (function () {
     		c: function create() {
     			p = element("p");
     			p.textContent = "Is loading";
-    			add_location(p, file$2, 89, 12, 2395);
+    			add_location(p, file$2, 90, 12, 2423);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, p, anchor);
@@ -4889,7 +4939,7 @@ var app = (function () {
     		block,
     		id: create_pending_block.name,
     		type: "pending",
-    		source: "(89:22)               <p>Is loading</p>              {:then datas}",
+    		source: "(90:22)               <p>Is loading</p>              {:then datas}",
     		ctx
     	});
 
@@ -4910,8 +4960,8 @@ var app = (function () {
     			h1.textContent = "Characters section";
     			t1 = space();
     			if (if_block) if_block.c();
-    			add_location(h1, file$2, 85, 4, 2307);
-    			add_location(main, file$2, 84, 0, 2295);
+    			add_location(h1, file$2, 86, 4, 2335);
+    			add_location(main, file$2, 85, 0, 2323);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -5056,6 +5106,7 @@ var app = (function () {
     	const resetSelects = () => {
     		$$invalidate(1, raceAr = fillSelects(datas).race);
     		$$invalidate(2, realmAr = fillSelects(datas).realm);
+    		return $$invalidate(0, clone = []);
     	};
 
     	const writable_props = [];

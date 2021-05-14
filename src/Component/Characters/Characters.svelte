@@ -78,6 +78,7 @@
     const resetSelects = () => {
         raceAr = fillSelects(datas).race;
         realmAr = fillSelects(datas).realm;
+        return clone = [];
     }
     
 </script>
@@ -89,28 +90,65 @@
         {#await datas}
             <p>Is loading</p>
             {:then datas} 
-            <div class="character-research">
-                <select value={race} name="race" on:change={onSelectChange.bind(race)}>
-                    {#each raceAr as race}
-                        <option value={race}>{race}</option>
-                    {/each}
-                </select>
-                {#if realmAr.length > 0}
-                    <select value={realm} name="realm"  on:change={onSelectChange.bind(realm)}>
-                        {#each realmAr as realm}
-                            <option value={realm}>{realm}</option>
+            <div class="content">
+                <div class="character-research">
+                    <div class="character-research--race">
+                        <span>Select a race</span>
+                        <select value={race} name="race" on:change={onSelectChange.bind(race)}>
+                            {#each raceAr as race}
+                                <option value={race}>{race}</option>
+                            {/each}
+                        </select>
+                    </div>
+                    <!-- {#if realmAr.length > 0} -->
+                        <div class="character-research--realm">
+                            <span>Select a realm</span>
+                            <select value={realm} name="realm"  on:change={onSelectChange.bind(realm)}>
+                                {#each realmAr as realm}
+                                    <option value={realm}>{realm}</option>
+                                {/each}
+                            </select>
+                        </div>
+                    <!-- {/if} -->
+                    <button on:click={resetSelects}>Reset filters</button>
+                </div>
+    
+                {#if clone.length > 0}
+                    <div class="characters">
+                        {#each clone as character }
+                            <SingleCharacter character={character}/>
                         {/each}
-                    </select>
+                    </div>
                 {/if}
-                <button on:click={resetSelects}>Reset filters</button>
             </div>
-
-            {#each clone as character }
-                <SingleCharacter character={character}/>
-            {/each}
         {/await}
     {/if}
 </main>
 
 <style type="text/scss">
+    $gold : #C4B479;
+    .character-research{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 1rem;
+        align-items: end;
+        text-align: left;
+        &--race{
+            grid-column: 1;
+        }&--realm{
+            grid-column: 2/4;
+        }
+        button{
+            grid-column: 4;
+        }
+        span{
+	        font-family: "Darleston";
+            color: $gold;
+            display: block;
+            font-size: 3em;
+        }
+        select{
+            width: 100%;
+        }
+    }
 </style>
