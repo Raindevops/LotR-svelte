@@ -9,7 +9,7 @@
 
 <Router url={url}>
     <header>
-        <span><Link to="/">LotR - Svelte</Link></span>
+        <span><Link to="/">LotR</Link></span>
         <nav>
             <Link to="/Books">Books</Link>
             <Link to="/Movies">Movies</Link>

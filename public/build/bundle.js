@@ -5023,21 +5023,59 @@ var app = (function () {
 
     function create_fragment$1(ctx) {
     	let section;
+    	let div2;
+    	let div0;
+    	let img;
+    	let img_src_value;
+    	let t0;
     	let h1;
-    	let t1;
-    	let p;
+    	let t2;
+    	let div1;
+    	let p0;
+    	let t4;
+    	let p1;
+    	let t5;
+    	let a;
+    	let i;
+    	let t7;
 
     	const block = {
     		c: function create() {
     			section = element("section");
+    			div2 = element("div");
+    			div0 = element("div");
+    			img = element("img");
+    			t0 = space();
     			h1 = element("h1");
     			h1.textContent = "Lord of the Rings";
-    			t1 = space();
-    			p = element("p");
-    			p.textContent = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, atque similique odit animi perspiciatis \r\n        dignissimos ducimus aliquam labore sed architecto repellendus? Natus assumenda id sunt sapiente, sed minima incidunt. Quidem.";
-    			add_location(h1, file$1, 6, 4, 55);
-    			add_location(p, file$1, 8, 4, 89);
-    			attr_dev(section, "class", "home");
+    			t2 = space();
+    			div1 = element("div");
+    			p0 = element("p");
+    			p0.textContent = "The Lord of the Rings is an epic high fantasy novel by the English author and scholar J. R. R. Tolkien.\r\n            Set in Middle-earth, the world at some distant time in the past, the story began as a sequel to Tolkien's 1937 children's book The Hobbit, but eventually developed into a much larger work.\r\n            Written in stages between 1937 and 1949, The Lord of the Rings is one of the best-selling books ever written, with over 150 million copies sold.";
+    			t4 = space();
+    			p1 = element("p");
+    			t5 = text("Using ");
+    			a = element("a");
+    			i = element("i");
+    			i.textContent = "The one API";
+    			t7 = text(" this project referenced datas abouts books and movies, and all characters from Tolkien's Universe.");
+    			if (img.src !== (img_src_value = "../assets/home.jpg")) attr_dev(img, "src", img_src_value);
+    			attr_dev(img, "alt", "land");
+    			attr_dev(img, "class", "svelte-3w7y3w");
+    			add_location(img, file$1, 7, 12, 122);
+    			attr_dev(div0, "class", "background svelte-3w7y3w");
+    			add_location(div0, file$1, 6, 8, 84);
+    			add_location(h1, file$1, 10, 8, 191);
+    			add_location(p0, file$1, 13, 12, 264);
+    			add_location(i, file$1, 17, 58, 808);
+    			attr_dev(a, "href", "https://the-one-api.dev/v2");
+    			add_location(a, file$1, 17, 21, 771);
+    			add_location(p1, file$1, 17, 12, 762);
+    			attr_dev(div1, "class", "content");
+    			add_location(div1, file$1, 12, 8, 229);
+    			attr_dev(div2, "class", "wrapper");
+    			add_location(div2, file$1, 5, 4, 53);
+    			attr_dev(section, "class", "home svelte-3w7y3w");
     			add_location(section, file$1, 4, 0, 25);
     		},
     		l: function claim(nodes) {
@@ -5045,9 +5083,20 @@ var app = (function () {
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, section, anchor);
-    			append_dev(section, h1);
-    			append_dev(section, t1);
-    			append_dev(section, p);
+    			append_dev(section, div2);
+    			append_dev(div2, div0);
+    			append_dev(div0, img);
+    			append_dev(div2, t0);
+    			append_dev(div2, h1);
+    			append_dev(div2, t2);
+    			append_dev(div2, div1);
+    			append_dev(div1, p0);
+    			append_dev(div1, t4);
+    			append_dev(div1, p1);
+    			append_dev(p1, t5);
+    			append_dev(p1, a);
+    			append_dev(a, i);
+    			append_dev(p1, t7);
     		},
     		p: noop,
     		i: noop,
@@ -5103,7 +5152,7 @@ var app = (function () {
 
     	const block = {
     		c: function create() {
-    			t = text("LotR - Svelte");
+    			t = text("LotR");
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, t, anchor);
@@ -5482,12 +5531,12 @@ var app = (function () {
     			attr_dev(span, "class", "svelte-1h7bpe9");
     			add_location(span, file, 11, 8, 391);
     			attr_dev(nav, "class", "svelte-1h7bpe9");
-    			add_location(nav, file, 12, 8, 447);
+    			add_location(nav, file, 12, 8, 438);
     			attr_dev(header, "class", "svelte-1h7bpe9");
     			add_location(header, file, 10, 4, 373);
-    			add_location(div, file, 20, 8, 651);
+    			add_location(div, file, 20, 8, 642);
     			attr_dev(main, "class", "svelte-1h7bpe9");
-    			add_location(main, file, 19, 4, 635);
+    			add_location(main, file, 19, 4, 626);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, header, anchor);
