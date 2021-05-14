@@ -14,11 +14,10 @@
 
         if (localStorage.getItem("characters")) {
             datas = JSON.parse(localStorage.getItem("characters"));
-            raceAr = fillSelects(datas).race;
-            realmAr = fillSelects(datas).realm;
+            raceAr = JSON.parse(localStorage.getItem("races"));
+            realmAr = JSON.parse(localStorage.getItem("realms"));
             return;
         }
-
         const request = await fetch(`${__lotr.env.API_URL}/character`,{
             headers: {
                 method: "GET",
@@ -28,7 +27,11 @@
         .then(response => response.json())
         .then(data => {
             datas = data.docs;
+            raceAr = fillSelects(datas).race;
+            realmAr = fillSelects(datas).realm;
             localStorage.setItem("characters", JSON.stringify(data.docs));
+            localStorage.setItem("races",JSON.stringify(raceAr));
+            localStorage.setItem("realms",JSON.stringify(realmAr));
         });
 
     });

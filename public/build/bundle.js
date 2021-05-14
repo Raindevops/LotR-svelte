@@ -2715,7 +2715,7 @@ var app = (function () {
     			return;
     		}
 
-    		await fetch(`${{"env":{"API_TOKEN":"_tsiQCD03OC_GV6s3qJk","API_URL":"https://the-one-api.dev/v2"}}.env.API_URL}/book/${book._id}/chapter`).then(resp => resp.json()).then(data => {
+    		await fetch(`${{"env":{"API_TOKEN":"cZ2qmInu4L33DZwT8lld","API_URL":"https://the-one-api.dev/v2"}}.env.API_URL}/book/${book._id}/chapter`).then(resp => resp.json()).then(data => {
     			$$invalidate(1, chapters = data.docs);
     			localStorage.setItem(`bookID-${book._id}`, JSON.stringify(chapters));
     		});
@@ -3155,7 +3155,7 @@ var app = (function () {
     			return;
     		}
 
-    		const response = await fetch(`${{"env":{"API_TOKEN":"_tsiQCD03OC_GV6s3qJk","API_URL":"https://the-one-api.dev/v2"}}.env.API_URL}/book`);
+    		const response = await fetch(`${{"env":{"API_TOKEN":"cZ2qmInu4L33DZwT8lld","API_URL":"https://the-one-api.dev/v2"}}.env.API_URL}/book`);
     		const data = await response.json();
     		$$invalidate(0, books = data.docs);
     		localStorage.setItem("books", JSON.stringify(books));
@@ -3684,10 +3684,10 @@ var app = (function () {
     			return;
     		}
 
-    		await fetch(`${{"env":{"API_TOKEN":"_tsiQCD03OC_GV6s3qJk","API_URL":"https://the-one-api.dev/v2"}}.env.API_URL}/movie`, {
+    		await fetch(`${{"env":{"API_TOKEN":"cZ2qmInu4L33DZwT8lld","API_URL":"https://the-one-api.dev/v2"}}.env.API_URL}/movie`, {
     			method: "GET",
     			headers: {
-    				"Authorization": `Bearer ${{"env":{"API_TOKEN":"_tsiQCD03OC_GV6s3qJk","API_URL":"https://the-one-api.dev/v2"}}.env.API_TOKEN}`
+    				"Authorization": `Bearer ${{"env":{"API_TOKEN":"cZ2qmInu4L33DZwT8lld","API_URL":"https://the-one-api.dev/v2"}}.env.API_TOKEN}`
     			}
     		}).then(result => result.json()).then(data => {
     			localStorage.setItem("movies", JSON.stringify(data.docs));
@@ -4026,7 +4026,7 @@ var app = (function () {
     	return child_ctx;
     }
 
-    // (91:4) {#if datas}
+    // (94:4) {#if datas}
     function create_if_block(ctx) {
     	let await_block_anchor;
     	let promise;
@@ -4093,7 +4093,7 @@ var app = (function () {
     		block,
     		id: create_if_block.name,
     		type: "if",
-    		source: "(91:4) {#if datas}",
+    		source: "(94:4) {#if datas}",
     		ctx
     	});
 
@@ -4122,7 +4122,7 @@ var app = (function () {
     	return block;
     }
 
-    // (94:12) {:then datas}
+    // (97:12) {:then datas}
     function create_then_block(ctx) {
     	let div3;
     	let div2;
@@ -4190,25 +4190,25 @@ var app = (function () {
     			t7 = space();
     			if (if_block) if_block.c();
     			attr_dev(span0, "class", "svelte-1sdqlbg");
-    			add_location(span0, file$2, 97, 24, 2745);
+    			add_location(span0, file$2, 100, 24, 3011);
     			attr_dev(select0, "name", "race");
     			attr_dev(select0, "class", "svelte-1sdqlbg");
-    			add_location(select0, file$2, 98, 24, 2797);
+    			add_location(select0, file$2, 101, 24, 3063);
     			attr_dev(div0, "class", "character-research--race svelte-1sdqlbg");
-    			add_location(div0, file$2, 96, 20, 2681);
+    			add_location(div0, file$2, 99, 20, 2947);
     			attr_dev(span1, "class", "svelte-1sdqlbg");
-    			add_location(span1, file$2, 105, 24, 3177);
+    			add_location(span1, file$2, 108, 24, 3443);
     			attr_dev(select1, "name", "realm");
     			attr_dev(select1, "class", "svelte-1sdqlbg");
-    			add_location(select1, file$2, 106, 24, 3230);
+    			add_location(select1, file$2, 109, 24, 3496);
     			attr_dev(div1, "class", "character-research--realm svelte-1sdqlbg");
-    			add_location(div1, file$2, 104, 20, 3112);
+    			add_location(div1, file$2, 107, 20, 3378);
     			attr_dev(button, "class", "svelte-1sdqlbg");
-    			add_location(button, file$2, 112, 20, 3553);
+    			add_location(button, file$2, 115, 20, 3819);
     			attr_dev(div2, "class", "character-research svelte-1sdqlbg");
-    			add_location(div2, file$2, 95, 16, 2627);
+    			add_location(div2, file$2, 98, 16, 2893);
     			attr_dev(div3, "class", "content");
-    			add_location(div3, file$2, 94, 12, 2588);
+    			add_location(div3, file$2, 97, 12, 2854);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div3, anchor);
@@ -4345,14 +4345,14 @@ var app = (function () {
     		block,
     		id: create_then_block.name,
     		type: "then",
-    		source: "(94:12) {:then datas}",
+    		source: "(97:12) {:then datas}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (100:28) {#each raceAr as race}
+    // (103:28) {#each raceAr as race}
     function create_each_block_2(ctx) {
     	let option;
     	let t_value = /*race*/ ctx[6] + "";
@@ -4365,7 +4365,7 @@ var app = (function () {
     			t = text(t_value);
     			option.__value = option_value_value = /*race*/ ctx[6];
     			option.value = option.__value;
-    			add_location(option, file$2, 100, 32, 2954);
+    			add_location(option, file$2, 103, 32, 3220);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, option, anchor);
@@ -4388,14 +4388,14 @@ var app = (function () {
     		block,
     		id: create_each_block_2.name,
     		type: "each",
-    		source: "(100:28) {#each raceAr as race}",
+    		source: "(103:28) {#each raceAr as race}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (108:28) {#each realmAr as realm}
+    // (111:28) {#each realmAr as realm}
     function create_each_block_1(ctx) {
     	let option;
     	let t_value = /*realm*/ ctx[7] + "";
@@ -4408,7 +4408,7 @@ var app = (function () {
     			t = text(t_value);
     			option.__value = option_value_value = /*realm*/ ctx[7];
     			option.value = option.__value;
-    			add_location(option, file$2, 108, 32, 3393);
+    			add_location(option, file$2, 111, 32, 3659);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, option, anchor);
@@ -4431,14 +4431,14 @@ var app = (function () {
     		block,
     		id: create_each_block_1.name,
     		type: "each",
-    		source: "(108:28) {#each realmAr as realm}",
+    		source: "(111:28) {#each realmAr as realm}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (116:16) {#if clone.length > 0}
+    // (119:16) {#if clone.length > 0}
     function create_if_block_1(ctx) {
     	let div;
     	let current;
@@ -4463,7 +4463,7 @@ var app = (function () {
     			}
 
     			attr_dev(div, "class", "characters svelte-1sdqlbg");
-    			add_location(div, file$2, 116, 20, 3699);
+    			add_location(div, file$2, 119, 20, 3965);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -4531,14 +4531,14 @@ var app = (function () {
     		block,
     		id: create_if_block_1.name,
     		type: "if",
-    		source: "(116:16) {#if clone.length > 0}",
+    		source: "(119:16) {#if clone.length > 0}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (118:24) {#each clone as character }
+    // (121:24) {#each clone as character }
     function create_each_block(ctx) {
     	let singlecharacter;
     	let current;
@@ -4579,14 +4579,14 @@ var app = (function () {
     		block,
     		id: create_each_block.name,
     		type: "each",
-    		source: "(118:24) {#each clone as character }",
+    		source: "(121:24) {#each clone as character }",
     		ctx
     	});
 
     	return block;
     }
 
-    // (92:22)               <p>Is loading</p>              {:then datas}
+    // (95:22)               <p>Is loading</p>              {:then datas}
     function create_pending_block(ctx) {
     	let p;
 
@@ -4594,7 +4594,7 @@ var app = (function () {
     		c: function create() {
     			p = element("p");
     			p.textContent = "Is loading";
-    			add_location(p, file$2, 92, 12, 2529);
+    			add_location(p, file$2, 95, 12, 2795);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, p, anchor);
@@ -4611,7 +4611,7 @@ var app = (function () {
     		block,
     		id: create_pending_block.name,
     		type: "pending",
-    		source: "(92:22)               <p>Is loading</p>              {:then datas}",
+    		source: "(95:22)               <p>Is loading</p>              {:then datas}",
     		ctx
     	});
 
@@ -4642,11 +4642,11 @@ var app = (function () {
     			if (img.src !== (img_src_value = "../assets/old-book.jpg")) attr_dev(img, "src", img_src_value);
     			attr_dev(img, "alt", "old book");
     			attr_dev(img, "class", "svelte-1sdqlbg");
-    			add_location(img, file$2, 87, 8, 2380);
+    			add_location(img, file$2, 90, 8, 2646);
     			attr_dev(div, "class", "characters-background svelte-1sdqlbg");
-    			add_location(div, file$2, 86, 4, 2335);
-    			add_location(h1, file$2, 89, 4, 2447);
-    			add_location(main, file$2, 85, 0, 2323);
+    			add_location(div, file$2, 89, 4, 2601);
+    			add_location(h1, file$2, 92, 4, 2713);
+    			add_location(main, file$2, 88, 0, 2589);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -4724,19 +4724,23 @@ var app = (function () {
     	onMount(async function () {
     		if (localStorage.getItem("characters")) {
     			$$invalidate(3, datas = JSON.parse(localStorage.getItem("characters")));
-    			$$invalidate(1, raceAr = fillSelects(datas).race);
-    			$$invalidate(2, realmAr = fillSelects(datas).realm);
+    			$$invalidate(1, raceAr = JSON.parse(localStorage.getItem("races")));
+    			$$invalidate(2, realmAr = JSON.parse(localStorage.getItem("realms")));
     			return;
     		}
 
-    		await fetch(`${{"env":{"API_TOKEN":"_tsiQCD03OC_GV6s3qJk","API_URL":"https://the-one-api.dev/v2"}}.env.API_URL}/character`, {
+    		await fetch(`${{"env":{"API_TOKEN":"cZ2qmInu4L33DZwT8lld","API_URL":"https://the-one-api.dev/v2"}}.env.API_URL}/character`, {
     			headers: {
     				method: "GET",
-    				Authorization: `Bearer ${{"env":{"API_TOKEN":"_tsiQCD03OC_GV6s3qJk","API_URL":"https://the-one-api.dev/v2"}}.env.API_TOKEN}`
+    				Authorization: `Bearer ${{"env":{"API_TOKEN":"cZ2qmInu4L33DZwT8lld","API_URL":"https://the-one-api.dev/v2"}}.env.API_TOKEN}`
     			}
     		}).then(response => response.json()).then(data => {
     			$$invalidate(3, datas = data.docs);
+    			$$invalidate(1, raceAr = fillSelects(datas).race);
+    			$$invalidate(2, realmAr = fillSelects(datas).realm);
     			localStorage.setItem("characters", JSON.stringify(data.docs));
+    			localStorage.setItem("races", JSON.stringify(raceAr));
+    			localStorage.setItem("realms", JSON.stringify(realmAr));
     		});
     	});
 
