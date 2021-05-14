@@ -35,10 +35,12 @@ import SingleMovie from './SingleMovie.svelte';
         {#await movies}
             <p>Movies are loading</p>
             {:then movies}
-            <div class="movies content">
-                {#each movies as movie}
-                    <SingleMovie movie={movie}/>
-                {/each}
+            <div class="content">
+                <div class="movies">
+                    {#each movies as movie}
+                        <SingleMovie movie={movie}/>
+                    {/each}
+                </div>
             </div>
         {/await}
     {/if}
@@ -61,10 +63,9 @@ import SingleMovie from './SingleMovie.svelte';
         }
         margin-top:  65px;
         .movies{
-            display: flex;
-            flex-direction: row;
-            flex-wrap: wrap;
-            justify-content: space-between;
+            display: grid;
+            grid-gap: 2rem;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
         }
     }
 </style>
