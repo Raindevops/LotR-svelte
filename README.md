@@ -19,3 +19,7 @@ It uses an free api which reference books, chapters, actors, and famous quote
 **build project and minify :** :flashlight:
 
     npm run build 
+
+@todo : 
+    - fix responsive
+    - add animations
