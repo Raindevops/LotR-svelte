@@ -90,7 +90,7 @@
     <div class="characters-background">
         <img src="../assets/old-book.jpg" alt="old book">
     </div>
-    <h1>Characters section</h1>
+    <h1>Discover famous characters from Tolkien's universe</h1>
     {#if datas}
         {#await datas}
             <p>Is loading</p>

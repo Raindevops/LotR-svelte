@@ -2243,7 +2243,7 @@ var app = (function () {
     		c: function create() {
     			div = element("div");
     			info.block.c();
-    			attr_dev(div, "class", "content svelte-1nrp8xt");
+    			attr_dev(div, "class", "content svelte-c7o4rj");
     			add_location(div, file$7, 36, 4, 1094);
     		},
     		m: function mount(target, anchor) {
@@ -2337,10 +2337,10 @@ var app = (function () {
     			}
 
     			attr_dev(td0, "align", "left");
-    			attr_dev(td0, "class", "svelte-1nrp8xt");
+    			attr_dev(td0, "class", "svelte-c7o4rj");
     			add_location(td0, file$7, 42, 20, 1271);
     			attr_dev(td1, "align", "right");
-    			attr_dev(td1, "class", "svelte-1nrp8xt");
+    			attr_dev(td1, "class", "svelte-c7o4rj");
     			add_location(td1, file$7, 49, 20, 1594);
     			add_location(tr, file$7, 41, 16, 1245);
     			attr_dev(table, "width", "100%");
@@ -2644,11 +2644,11 @@ var app = (function () {
     			t0 = text(t0_value);
     			t1 = space();
     			if (if_block) if_block.c();
-    			attr_dev(h2, "class", "svelte-1nrp8xt");
+    			attr_dev(h2, "class", "svelte-c7o4rj");
     			add_location(h2, file$7, 33, 8, 1023);
     			attr_dev(div0, "class", "title");
     			add_location(div0, file$7, 32, 4, 994);
-    			attr_dev(div1, "class", "book svelte-1nrp8xt");
+    			attr_dev(div1, "class", "book svelte-c7o4rj");
     			add_location(div1, file$7, 31, 0, 970);
     		},
     		l: function claim(nodes) {
@@ -3229,10 +3229,11 @@ var app = (function () {
     			span1 = element("span");
     			t3 = text(t3_value);
     			t4 = space();
-    			attr_dev(span0, "class", "svelte-14itksf");
+    			attr_dev(span0, "class", "svelte-16toxw1");
     			add_location(span0, file$5, 11, 20, 267);
-    			attr_dev(span1, "class", "svelte-14itksf");
+    			attr_dev(span1, "class", "svelte-16toxw1");
     			add_location(span1, file$5, 12, 20, 310);
+    			attr_dev(li, "class", "svelte-16toxw1");
     			add_location(li, file$5, 10, 16, 241);
     		},
     		m: function mount(target, anchor) {
@@ -3337,10 +3338,10 @@ var app = (function () {
     				each_blocks[i].c();
     			}
 
-    			attr_dev(h3, "class", "svelte-14itksf");
+    			attr_dev(h3, "class", "svelte-16toxw1");
     			add_location(h3, file$5, 5, 4, 70);
     			add_location(ul, file$5, 6, 4, 97);
-    			attr_dev(div, "class", "card svelte-14itksf");
+    			attr_dev(div, "class", "card svelte-16toxw1");
     			add_location(div, file$5, 4, 0, 46);
     		},
     		l: function claim(nodes) {
@@ -3593,9 +3594,9 @@ var app = (function () {
     			}
 
     			attr_dev(div0, "class", "movies svelte-bgrb68");
-    			add_location(div0, file$4, 38, 16, 1016);
+    			add_location(div0, file$4, 38, 16, 1056);
     			attr_dev(div1, "class", "content");
-    			add_location(div1, file$4, 37, 12, 977);
+    			add_location(div1, file$4, 37, 12, 1017);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div1, anchor);
@@ -3727,7 +3728,7 @@ var app = (function () {
     		c: function create() {
     			p = element("p");
     			p.textContent = "Movies are loading";
-    			add_location(p, file$4, 35, 12, 910);
+    			add_location(p, file$4, 35, 12, 950);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, p, anchor);
@@ -3766,7 +3767,7 @@ var app = (function () {
     			div = element("div");
     			t0 = space();
     			h1 = element("h1");
-    			h1.textContent = "Movies section";
+    			h1.textContent = "From the Hobbits saga to The Lord of the Rings trilogy";
     			t2 = space();
     			if (if_block) if_block.c();
     			attr_dev(div, "class", "background svelte-bgrb68");
@@ -4354,25 +4355,25 @@ var app = (function () {
     			t7 = space();
     			if (if_block) if_block.c();
     			attr_dev(span0, "class", "svelte-1sdqlbg");
-    			add_location(span0, file$2, 100, 24, 3011);
+    			add_location(span0, file$2, 100, 24, 3043);
     			attr_dev(select0, "name", "race");
     			attr_dev(select0, "class", "svelte-1sdqlbg");
-    			add_location(select0, file$2, 101, 24, 3063);
+    			add_location(select0, file$2, 101, 24, 3095);
     			attr_dev(div0, "class", "character-research--race svelte-1sdqlbg");
-    			add_location(div0, file$2, 99, 20, 2947);
+    			add_location(div0, file$2, 99, 20, 2979);
     			attr_dev(span1, "class", "svelte-1sdqlbg");
-    			add_location(span1, file$2, 108, 24, 3443);
+    			add_location(span1, file$2, 108, 24, 3475);
     			attr_dev(select1, "name", "realm");
     			attr_dev(select1, "class", "svelte-1sdqlbg");
-    			add_location(select1, file$2, 109, 24, 3496);
+    			add_location(select1, file$2, 109, 24, 3528);
     			attr_dev(div1, "class", "character-research--realm svelte-1sdqlbg");
-    			add_location(div1, file$2, 107, 20, 3378);
+    			add_location(div1, file$2, 107, 20, 3410);
     			attr_dev(button, "class", "svelte-1sdqlbg");
-    			add_location(button, file$2, 115, 20, 3819);
+    			add_location(button, file$2, 115, 20, 3851);
     			attr_dev(div2, "class", "character-research svelte-1sdqlbg");
-    			add_location(div2, file$2, 98, 16, 2893);
+    			add_location(div2, file$2, 98, 16, 2925);
     			attr_dev(div3, "class", "content");
-    			add_location(div3, file$2, 97, 12, 2854);
+    			add_location(div3, file$2, 97, 12, 2886);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div3, anchor);
@@ -4529,7 +4530,7 @@ var app = (function () {
     			t = text(t_value);
     			option.__value = option_value_value = /*race*/ ctx[6];
     			option.value = option.__value;
-    			add_location(option, file$2, 103, 32, 3220);
+    			add_location(option, file$2, 103, 32, 3252);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, option, anchor);
@@ -4572,7 +4573,7 @@ var app = (function () {
     			t = text(t_value);
     			option.__value = option_value_value = /*realm*/ ctx[7];
     			option.value = option.__value;
-    			add_location(option, file$2, 111, 32, 3659);
+    			add_location(option, file$2, 111, 32, 3691);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, option, anchor);
@@ -4627,7 +4628,7 @@ var app = (function () {
     			}
 
     			attr_dev(div, "class", "characters svelte-1sdqlbg");
-    			add_location(div, file$2, 119, 20, 3965);
+    			add_location(div, file$2, 119, 20, 3997);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -4758,7 +4759,7 @@ var app = (function () {
     		c: function create() {
     			p = element("p");
     			p.textContent = "Is loading";
-    			add_location(p, file$2, 95, 12, 2795);
+    			add_location(p, file$2, 95, 12, 2827);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, p, anchor);
@@ -4800,7 +4801,7 @@ var app = (function () {
     			img = element("img");
     			t0 = space();
     			h1 = element("h1");
-    			h1.textContent = "Characters section";
+    			h1.textContent = "Discover famous characters from Tolkien's universe";
     			t2 = space();
     			if (if_block) if_block.c();
     			if (img.src !== (img_src_value = "../assets/old-book.jpg")) attr_dev(img, "src", img_src_value);
@@ -5030,12 +5031,12 @@ var app = (function () {
     		c: function create() {
     			section = element("section");
     			h1 = element("h1");
-    			h1.textContent = "Lord of the ring";
+    			h1.textContent = "Lord of the Rings";
     			t1 = space();
     			p = element("p");
     			p.textContent = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, atque similique odit animi perspiciatis \r\n        dignissimos ducimus aliquam labore sed architecto repellendus? Natus assumenda id sunt sapiente, sed minima incidunt. Quidem.";
     			add_location(h1, file$1, 6, 4, 55);
-    			add_location(p, file$1, 8, 4, 88);
+    			add_location(p, file$1, 8, 4, 89);
     			attr_dev(section, "class", "home");
     			add_location(section, file$1, 4, 0, 25);
     		},

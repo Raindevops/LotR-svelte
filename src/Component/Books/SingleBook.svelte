@@ -68,7 +68,7 @@
         height: 100%;
         min-height: fit-content;
         h2{
-            margin:0;
+            margin:0 0 2rem 0;
         }
     }
     .content{
