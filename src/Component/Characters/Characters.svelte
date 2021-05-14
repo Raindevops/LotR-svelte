@@ -84,8 +84,10 @@
 </script>
 
 <main>
+    <div class="characters-background">
+        <img src="../assets/old-book.jpg" alt="old book">
+    </div>
     <h1>Characters section</h1>
-    
     {#if datas}
         {#await datas}
             <p>Is loading</p>
@@ -125,6 +127,21 @@
 
 <style type="text/scss">
     $gold : #C4B479;
+    .characters-background{
+        position: fixed;
+        top:0;
+        left:0;
+        width: 100vw;
+        height: 100vh;
+        z-index: -1;
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: .2;
+            filter: saturate(.7);
+        }
+    }
     .character-research{
         display: grid;
         grid-template-columns: repeat(2fr, 1fr);

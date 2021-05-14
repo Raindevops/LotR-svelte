@@ -2,7 +2,6 @@
     import {Router, Link, Route} from "svelte-routing";
     import Books from "./Component/Books/Books.svelte";
     import Movies from "./Component/Movies/Movies.svelte";
-    import Quotes from "./Component/Quotes/Quotes.svelte";
     import Characters from "./Component/Characters/Characters.svelte";
     import Home from "./Component/Home/Home.svelte";
     export let url = '';
@@ -14,7 +13,6 @@
         <nav>
             <Link to="/Books">Books</Link>
             <Link to="/Movies">Movies</Link>
-            <Link to="/Quotes">Quotes</Link>
             <Link to="/Characters">Characters</Link>
         </nav>
     </header>
@@ -29,9 +27,6 @@
             </Route>
             <Route path="/Movies">
                 <Movies/>
-            </Route>
-            <Route path="/Quotes">
-                <Quotes/>
             </Route>
             <Route path="/Characters">
                 <Characters/>
@@ -81,12 +76,7 @@
     main {
         text-align: center;
         padding: 1em;
-        max-width: 240px;
         margin: 0 auto;
-    }
-    @media (min-width: 640px){
-        main{
-            max-width: none;
-        }
+        position: relative;
     }
 </style>
