@@ -59,11 +59,15 @@
             z-index: -1;
             opacity: 0.2;
             filter: saturate(0.3);
+            animation: 1s ease-in-out fadeIn;
         }
-        h2{
+        h2 {
             padding: 1rem 0;
-            @media screen and (min-width: 576px)
-            {
+            animation: 1s ease-in-out slideUp;
+            animation-delay: 1s;
+            opacity: 0;
+            animation-fill-mode: forwards;
+            @media screen and (min-width: 576px) {
                 padding: 2rem 0;
             }
             @media screen and (min-width: 768px) {
@@ -74,8 +78,32 @@
             display: grid;
             grid-gap: 2rem;
             grid-template-columns: repeat(1, minmax(0, 1fr));
+            animation: 1s ease-in-out slideUp;
+            animation-delay: 1.5s;
+            opacity: 0;
+            animation-fill-mode: forwards;
             @media screen and (min-width: 768px) {
                 grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 0.2;
+            }
+        }
+
+        @keyframes slideUp {
+            from {
+                transform: translateY(5rem);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
             }
         }
     }

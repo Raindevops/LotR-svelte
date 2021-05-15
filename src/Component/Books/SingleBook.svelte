@@ -49,7 +49,7 @@
 <style type="text/scss">
     .book {
         margin-bottom: 2rem;
-        @media screen and (min-width: 768px){
+        @media screen and (min-width: 768px) {
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -59,12 +59,21 @@
         }
         h2 {
             margin: 0 0 2rem 0;
+            padding-bottom: 2rem;
+            animation: 1s ease-in-out slideUp;
+            animation-delay: 1s;
+            opacity: 0;
+            animation-fill-mode: forwards;
         }
     }
     .content {
         display: grid;
         grid-template-columns: repeat(1, 1fr);
         max-width: fit-content;
+        animation: 1s ease-in-out slideUp;
+        animation-delay: 1.5s;
+        opacity: 0;
+        animation-fill-mode: forwards;
         @media (min-width: 768px) {
             max-width: unset;
             grid-template-columns: repeat(2, 1fr);
@@ -83,6 +92,17 @@
                     grid-column: 2;
                 }
             }
+        }
+    }
+
+    @keyframes slideUp {
+        from {
+            transform: translateY(5rem);
+            opacity: 0;
+        }
+        to {
+            transform: translateY(0);
+            opacity: 1;
         }
     }
 </style>

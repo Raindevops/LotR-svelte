@@ -152,6 +152,10 @@
         margin-top: 70px;
         h2 {
             padding: 1rem 0;
+            animation: 1s ease-in-out slideUp;
+            animation-delay: 1s;
+            opacity: 0;
+            animation-fill-mode: forwards;
             @media screen and (min-width: 576px) {
                 padding: 2rem 0;
             }
@@ -167,6 +171,7 @@
         width: 100vw;
         height: 100vh;
         z-index: -1;
+        animation: 1s ease-in-out fadeIn;
         img {
             width: 100%;
             height: 100%;
@@ -224,6 +229,31 @@
         }
         @media screen and (min-width: 768px) {
             grid-template-columns: repeat(3, minmax(0, 1fr));
+        }
+    }
+    .content {
+        animation: 1s ease-in-out slideUp;
+        animation-delay: 1.5s;
+        opacity: 0;
+        animation-fill-mode: forwards;
+    }
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+
+    @keyframes slideUp {
+        from {
+            transform: translateY(5rem);
+            opacity: 0;
+        }
+        to {
+            transform: translateY(0);
+            opacity: 1;
         }
     }
 </style>

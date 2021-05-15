@@ -2320,11 +2320,11 @@ var app = (function () {
     				each_blocks[i].c();
     			}
 
-    			attr_dev(ul0, "class", "chapters-left svelte-1ijx2r9");
+    			attr_dev(ul0, "class", "chapters-left svelte-1hwft2m");
     			add_location(ul0, file$7, 29, 16, 794);
-    			attr_dev(ul1, "class", "chapters-right svelte-1ijx2r9");
+    			attr_dev(ul1, "class", "chapters-right svelte-1hwft2m");
     			add_location(ul1, file$7, 36, 16, 1110);
-    			attr_dev(div, "class", "content svelte-1ijx2r9");
+    			attr_dev(div, "class", "content svelte-1hwft2m");
     			add_location(div, file$7, 28, 12, 756);
     		},
     		m: function mount(target, anchor) {
@@ -2624,11 +2624,11 @@ var app = (function () {
     			t0 = text(t0_value);
     			t1 = space();
     			if (if_block) if_block.c();
-    			attr_dev(h2, "class", "svelte-1ijx2r9");
+    			attr_dev(h2, "class", "svelte-1hwft2m");
     			add_location(h2, file$7, 22, 8, 609);
     			attr_dev(div0, "class", "title");
     			add_location(div0, file$7, 21, 4, 581);
-    			attr_dev(div1, "class", "book svelte-1ijx2r9");
+    			attr_dev(div1, "class", "book svelte-1hwft2m");
     			add_location(div1, file$7, 20, 0, 558);
     		},
     		l: function claim(nodes) {
@@ -2757,7 +2757,7 @@ var app = (function () {
     	return child_ctx;
     }
 
-    // (24:4) {#if books !== undefined}
+    // (22:4) {#if books !== undefined}
     function create_if_block$4(ctx) {
     	let await_block_anchor;
     	let promise;
@@ -2824,7 +2824,7 @@ var app = (function () {
     		block,
     		id: create_if_block$4.name,
     		type: "if",
-    		source: "(24:4) {#if books !== undefined}",
+    		source: "(22:4) {#if books !== undefined}",
     		ctx
     	});
 
@@ -2853,7 +2853,7 @@ var app = (function () {
     	return block;
     }
 
-    // (27:12) {:then books}
+    // (25:8) {:then books}
     function create_then_block$2(ctx) {
     	let each_1_anchor;
     	let current;
@@ -2942,14 +2942,14 @@ var app = (function () {
     		block,
     		id: create_then_block$2.name,
     		type: "then",
-    		source: "(27:12) {:then books}",
+    		source: "(25:8) {:then books}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (28:16) {#each books as book}
+    // (26:12) {#each books as book}
     function create_each_block$4(ctx) {
     	let singlebook;
     	let current;
@@ -2990,14 +2990,14 @@ var app = (function () {
     		block,
     		id: create_each_block$4.name,
     		type: "each",
-    		source: "(28:16) {#each books as book}",
+    		source: "(26:12) {#each books as book}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (25:22)              <p>Loading</p>             {:then books}
+    // (23:22)              <p>Loading</p>         {:then books}
     function create_pending_block$2(ctx) {
     	let p;
 
@@ -3005,7 +3005,7 @@ var app = (function () {
     		c: function create() {
     			p = element("p");
     			p.textContent = "Loading";
-    			add_location(p, file$6, 25, 12, 641);
+    			add_location(p, file$6, 23, 12, 630);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, p, anchor);
@@ -3022,7 +3022,7 @@ var app = (function () {
     		block,
     		id: create_pending_block$2.name,
     		type: "pending",
-    		source: "(25:22)              <p>Loading</p>             {:then books}",
+    		source: "(23:22)              <p>Loading</p>         {:then books}",
     		ctx
     	});
 
@@ -3042,10 +3042,10 @@ var app = (function () {
     			div = element("div");
     			t = space();
     			if (if_block) if_block.c();
-    			attr_dev(div, "class", "background svelte-15mhwk6");
-    			add_location(div, file$6, 21, 4, 540);
-    			attr_dev(section, "class", "books svelte-15mhwk6");
-    			add_location(section, file$6, 20, 0, 512);
+    			attr_dev(div, "class", "background svelte-g6e5kj");
+    			add_location(div, file$6, 20, 4, 538);
+    			attr_dev(section, "class", "books svelte-g6e5kj");
+    			add_location(section, file$6, 19, 0, 510);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -3555,7 +3555,7 @@ var app = (function () {
     				each_blocks[i].c();
     			}
 
-    			attr_dev(div0, "class", "movies svelte-12k69ng");
+    			attr_dev(div0, "class", "movies svelte-iymiej");
     			add_location(div0, file$4, 35, 16, 1068);
     			attr_dev(div1, "class", "content");
     			add_location(div1, file$4, 34, 12, 1030);
@@ -3732,11 +3732,11 @@ var app = (function () {
     			h2.textContent = "From the Hobbits saga to The Lord of the Rings trilogy";
     			t2 = space();
     			if (if_block) if_block.c();
-    			attr_dev(div, "class", "background svelte-12k69ng");
+    			attr_dev(div, "class", "background svelte-iymiej");
     			add_location(div, file$4, 27, 4, 806);
-    			attr_dev(h2, "class", "svelte-12k69ng");
+    			attr_dev(h2, "class", "svelte-iymiej");
     			add_location(h2, file$4, 28, 4, 837);
-    			attr_dev(section, "class", "movies-section svelte-12k69ng");
+    			attr_dev(section, "class", "movies-section svelte-iymiej");
     			add_location(section, file$4, 26, 0, 769);
     		},
     		l: function claim(nodes) {
@@ -4317,25 +4317,25 @@ var app = (function () {
     			button.textContent = "Reset filters";
     			t7 = space();
     			if (if_block) if_block.c();
-    			attr_dev(span0, "class", "svelte-1rvgozb");
+    			attr_dev(span0, "class", "svelte-nl7vgu");
     			add_location(span0, file$2, 109, 24, 3183);
     			attr_dev(select0, "name", "race");
-    			attr_dev(select0, "class", "svelte-1rvgozb");
+    			attr_dev(select0, "class", "svelte-nl7vgu");
     			add_location(select0, file$2, 110, 24, 3234);
-    			attr_dev(div0, "class", "character-research--race svelte-1rvgozb");
+    			attr_dev(div0, "class", "character-research--race svelte-nl7vgu");
     			add_location(div0, file$2, 108, 20, 3120);
-    			attr_dev(span1, "class", "svelte-1rvgozb");
+    			attr_dev(span1, "class", "svelte-nl7vgu");
     			add_location(span1, file$2, 121, 24, 3716);
     			attr_dev(select1, "name", "realm");
-    			attr_dev(select1, "class", "svelte-1rvgozb");
+    			attr_dev(select1, "class", "svelte-nl7vgu");
     			add_location(select1, file$2, 122, 24, 3768);
-    			attr_dev(div1, "class", "character-research--realm svelte-1rvgozb");
+    			attr_dev(div1, "class", "character-research--realm svelte-nl7vgu");
     			add_location(div1, file$2, 120, 20, 3652);
-    			attr_dev(button, "class", "svelte-1rvgozb");
+    			attr_dev(button, "class", "svelte-nl7vgu");
     			add_location(button, file$2, 132, 20, 4193);
-    			attr_dev(div2, "class", "character-research svelte-1rvgozb");
+    			attr_dev(div2, "class", "character-research svelte-nl7vgu");
     			add_location(div2, file$2, 107, 16, 3067);
-    			attr_dev(div3, "class", "content");
+    			attr_dev(div3, "class", "content svelte-nl7vgu");
     			add_location(div3, file$2, 106, 12, 3029);
     		},
     		m: function mount(target, anchor) {
@@ -4590,7 +4590,7 @@ var app = (function () {
     				each_blocks[i].c();
     			}
 
-    			attr_dev(div, "class", "characters svelte-1rvgozb");
+    			attr_dev(div, "class", "characters svelte-nl7vgu");
     			add_location(div, file$2, 136, 20, 4331);
     		},
     		m: function mount(target, anchor) {
@@ -4769,13 +4769,13 @@ var app = (function () {
     			if (if_block) if_block.c();
     			if (img.src !== (img_src_value = "../assets/old-book.jpg")) attr_dev(img, "src", img_src_value);
     			attr_dev(img, "alt", "old book");
-    			attr_dev(img, "class", "svelte-1rvgozb");
+    			attr_dev(img, "class", "svelte-nl7vgu");
     			add_location(img, file$2, 99, 8, 2799);
-    			attr_dev(div, "class", "characters-background svelte-1rvgozb");
+    			attr_dev(div, "class", "characters-background svelte-nl7vgu");
     			add_location(div, file$2, 98, 4, 2755);
-    			attr_dev(h2, "class", "svelte-1rvgozb");
+    			attr_dev(h2, "class", "svelte-nl7vgu");
     			add_location(h2, file$2, 101, 4, 2866);
-    			attr_dev(section, "class", "svelte-1rvgozb");
+    			attr_dev(section, "class", "svelte-nl7vgu");
     			add_location(section, file$2, 97, 0, 2741);
     		},
     		l: function claim(nodes) {
@@ -5016,32 +5016,33 @@ var app = (function () {
     			t2 = space();
     			div1 = element("div");
     			p0 = element("p");
-    			p0.textContent = "The Lord of the Rings is an epic high fantasy novel by the English author and scholar J. R. R. Tolkien.\n            Set in Middle-earth, the world at some distant time in the past, the story began as a sequel to Tolkien's 1937 children's book The Hobbit, but eventually developed into a much larger work.\n            Written in stages between 1937 and 1949, The Lord of the Rings is one of the best-selling books ever written, with over 150 million copies sold.";
+    			p0.textContent = "The Lord of the Rings is an epic high fantasy novel by the\n                English author and scholar J. R. R. Tolkien. Set in\n                Middle-earth, the world at some distant time in the past, the\n                story began as a sequel to Tolkien's 1937 children's book The\n                Hobbit, but eventually developed into a much larger work.\n                Written in stages between 1937 and 1949, The Lord of the Rings\n                is one of the best-selling books ever written, with over 150\n                million copies sold.";
     			t4 = space();
     			p1 = element("p");
     			t5 = text("Using ");
     			a = element("a");
     			i = element("i");
     			i.textContent = "The one API";
-    			t7 = text(" this project referenced datas abouts books and movies, and all characters from Tolkien's Universe.");
+    			t7 = text(" this\n                project referenced datas abouts books and movies, and all characters\n                from Tolkien's Universe.");
     			if (img.src !== (img_src_value = "../assets/home.jpg")) attr_dev(img, "src", img_src_value);
     			attr_dev(img, "alt", "land");
-    			attr_dev(img, "class", "svelte-rkqvti");
-    			add_location(img, file$1, 7, 12, 115);
-    			attr_dev(div0, "class", "background svelte-rkqvti");
-    			add_location(div0, file$1, 6, 8, 78);
-    			add_location(h1, file$1, 10, 8, 181);
-    			add_location(p0, file$1, 13, 12, 251);
-    			add_location(i, file$1, 17, 55, 788);
+    			attr_dev(img, "class", "svelte-27u07c");
+    			add_location(img, file$1, 6, 12, 114);
+    			attr_dev(div0, "class", "background svelte-27u07c");
+    			add_location(div0, file$1, 5, 8, 77);
+    			attr_dev(h1, "class", "svelte-27u07c");
+    			add_location(h1, file$1, 9, 8, 182);
+    			add_location(p0, file$1, 12, 12, 252);
+    			add_location(i, file$1, 23, 56, 911);
     			attr_dev(a, "href", "https://the-one-api.dev");
-    			add_location(a, file$1, 17, 21, 754);
-    			add_location(p1, file$1, 17, 12, 745);
-    			attr_dev(div1, "class", "content");
-    			add_location(div1, file$1, 12, 8, 217);
+    			add_location(a, file$1, 23, 22, 877);
+    			add_location(p1, file$1, 22, 12, 851);
+    			attr_dev(div1, "class", "content svelte-27u07c");
+    			add_location(div1, file$1, 11, 8, 218);
     			attr_dev(div2, "class", "wrapper");
-    			add_location(div2, file$1, 5, 4, 48);
-    			attr_dev(section, "class", "home svelte-rkqvti");
-    			add_location(section, file$1, 4, 0, 21);
+    			add_location(div2, file$1, 4, 4, 47);
+    			attr_dev(section, "class", "home svelte-27u07c");
+    			add_location(section, file$1, 3, 0, 20);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
