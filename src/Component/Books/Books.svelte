@@ -35,7 +35,6 @@
 <style type="text/scss">
     main{
         position: relative;
-        height: calc(100vh - 65px);
         .background{
             background-image: url('../assets/book-background.png');
             background-repeat: no-repeat;

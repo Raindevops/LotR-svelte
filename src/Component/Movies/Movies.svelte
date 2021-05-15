@@ -1,44 +1,41 @@
 <script>
-    import {onMount} from 'svelte';
-import SingleMovie from './SingleMovie.svelte';
+    import { onMount } from "svelte";
+    import SingleMovie from "./SingleMovie.svelte";
     let movies = [];
 
-    onMount(async function(){
-
+    onMount(async function () {
         if (localStorage.getItem("movies")) {
             movies = JSON.parse(localStorage.getItem("movies"));
-            console.log(movies)
+            console.log(movies);
             return;
         }
 
-        const response = await fetch(`${__lotr.env.API_URL}/movie`,{
+        const response = await fetch(`${__lotr.env.API_URL}/movie`, {
             method: "GET",
-            headers:{
-                "Authorization": `Bearer ${__lotr.env.API_TOKEN}`,
+            headers: {
+                Authorization: `Bearer ${__lotr.env.API_TOKEN}`,
             },
         })
-        .then(result => result.json())
-        .then(data => {
-            localStorage.setItem("movies", JSON.stringify(data.docs));
-            return movies = data.docs;
-        });
+            .then((result) => result.json())
+            .then((data) => {
+                localStorage.setItem("movies", JSON.stringify(data.docs));
+                return (movies = data.docs);
+            });
     });
-
 </script>
 
-
 <main>
-    <div class="background"></div>
+    <div class="background" />
     <h2>From the Hobbits saga to The Lord of the Rings trilogy</h2>
 
     {#if movies !== undefined}
         {#await movies}
             <p>Movies are loading</p>
-            {:then movies}
+        {:then movies}
             <div class="content">
                 <div class="movies">
                     {#each movies as movie}
-                        <SingleMovie movie={movie}/>
+                        <SingleMovie {movie} />
                     {/each}
                 </div>
             </div>
@@ -47,25 +44,29 @@ import SingleMovie from './SingleMovie.svelte';
 </main>
 
 <style type="text/scss">
-    main{
+    main {
         position: relative;
-        height: calc(100vh - 65px);
-        .background{
-            background-image: url('../assets/movie-background.png');
+        .background {
+            background-image: url("../assets/movie-background.jpg");
             background-repeat: no-repeat;
             background-size: cover;
             width: 100%;
             height: 100%;
             position: fixed;
-            top:0;
-            left:0;
+            top: 0;
+            left: 0;
             z-index: -1;
+            opacity: .2;
+            filter: saturate(.3)
         }
-        margin-top:  65px;
-        .movies{
+        margin-top: 65px;
+        .movies {
             display: grid;
             grid-gap: 2rem;
-            grid-template-columns: repeat(2, minmax(0, 1fr));
+            grid-template-columns: repeat(1, minmax(0, 1fr));
+            @media screen and (min-width: 768px) {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
         }
     }
 </style>

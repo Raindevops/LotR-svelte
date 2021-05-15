@@ -47,6 +47,9 @@
         nav, span {
             margin: 1rem 0;
             padding: 0 .75rem;
+            &:first-child{
+                font-size: 1.25em;
+            }
         }
         :global(a) {
             color:$gold;
@@ -75,8 +78,11 @@
     }
     main {
         text-align: center;
-        padding: 1em;
+        padding: 1rem;
         margin: 0 auto;
         position: relative;
+        @media screen and (min-width: 768px) {
+            padding: 1rem 1rem 2rem 1rem
+        }
     }
 </style>

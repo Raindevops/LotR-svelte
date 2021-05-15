@@ -3042,9 +3042,9 @@ var app = (function () {
     			div = element("div");
     			t = space();
     			if (if_block) if_block.c();
-    			attr_dev(div, "class", "background svelte-12namml");
+    			attr_dev(div, "class", "background svelte-1vgilxg");
     			add_location(div, file$6, 21, 4, 523);
-    			attr_dev(main, "class", "svelte-12namml");
+    			attr_dev(main, "class", "svelte-1vgilxg");
     			add_location(main, file$6, 20, 0, 512);
     		},
     		l: function claim(nodes) {
@@ -3192,11 +3192,10 @@ var app = (function () {
     			span1 = element("span");
     			t3 = text(t3_value);
     			t4 = space();
-    			attr_dev(span0, "class", "svelte-16toxw1");
+    			attr_dev(span0, "class", "svelte-1ops34d");
     			add_location(span0, file$5, 11, 20, 256);
-    			attr_dev(span1, "class", "svelte-16toxw1");
+    			attr_dev(span1, "class", "svelte-1ops34d");
     			add_location(span1, file$5, 12, 20, 298);
-    			attr_dev(li, "class", "svelte-16toxw1");
     			add_location(li, file$5, 10, 16, 231);
     		},
     		m: function mount(target, anchor) {
@@ -3301,10 +3300,10 @@ var app = (function () {
     				each_blocks[i].c();
     			}
 
-    			attr_dev(h3, "class", "svelte-16toxw1");
+    			attr_dev(h3, "class", "svelte-1ops34d");
     			add_location(h3, file$5, 5, 4, 65);
     			add_location(ul, file$5, 6, 4, 91);
-    			attr_dev(div, "class", "card svelte-16toxw1");
+    			attr_dev(div, "class", "card svelte-1ops34d");
     			add_location(div, file$5, 4, 0, 42);
     		},
     		l: function claim(nodes) {
@@ -3434,7 +3433,7 @@ var app = (function () {
     	return child_ctx;
     }
 
-    // (34:4) {#if movies !== undefined}
+    // (31:4) {#if movies !== undefined}
     function create_if_block$2(ctx) {
     	let await_block_anchor;
     	let promise;
@@ -3501,14 +3500,14 @@ var app = (function () {
     		block,
     		id: create_if_block$2.name,
     		type: "if",
-    		source: "(34:4) {#if movies !== undefined}",
+    		source: "(31:4) {#if movies !== undefined}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (1:0) <script>     import {onMount}
+    // (1:0) <script>     import { onMount }
     function create_catch_block$1(ctx) {
     	const block = {
     		c: noop,
@@ -3523,14 +3522,14 @@ var app = (function () {
     		block,
     		id: create_catch_block$1.name,
     		type: "catch",
-    		source: "(1:0) <script>     import {onMount}",
+    		source: "(1:0) <script>     import { onMount }",
     		ctx
     	});
 
     	return block;
     }
 
-    // (37:12) {:then movies}
+    // (34:8) {:then movies}
     function create_then_block$1(ctx) {
     	let div1;
     	let div0;
@@ -3556,10 +3555,10 @@ var app = (function () {
     				each_blocks[i].c();
     			}
 
-    			attr_dev(div0, "class", "movies svelte-bgrb68");
-    			add_location(div0, file$4, 38, 16, 1018);
+    			attr_dev(div0, "class", "movies svelte-1xylers");
+    			add_location(div0, file$4, 35, 16, 1042);
     			attr_dev(div1, "class", "content");
-    			add_location(div1, file$4, 37, 12, 980);
+    			add_location(div1, file$4, 34, 12, 1004);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div1, anchor);
@@ -3628,14 +3627,14 @@ var app = (function () {
     		block,
     		id: create_then_block$1.name,
     		type: "then",
-    		source: "(37:12) {:then movies}",
+    		source: "(34:8) {:then movies}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (40:20) {#each movies as movie}
+    // (37:20) {#each movies as movie}
     function create_each_block$2(ctx) {
     	let singlemovie;
     	let current;
@@ -3676,14 +3675,14 @@ var app = (function () {
     		block,
     		id: create_each_block$2.name,
     		type: "each",
-    		source: "(40:20) {#each movies as movie}",
+    		source: "(37:20) {#each movies as movie}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (35:23)              <p>Movies are loading</p>             {:then movies}
+    // (32:23)              <p>Movies are loading</p>         {:then movies}
     function create_pending_block$1(ctx) {
     	let p;
 
@@ -3691,7 +3690,7 @@ var app = (function () {
     		c: function create() {
     			p = element("p");
     			p.textContent = "Movies are loading";
-    			add_location(p, file$4, 35, 12, 915);
+    			add_location(p, file$4, 32, 12, 943);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, p, anchor);
@@ -3708,7 +3707,7 @@ var app = (function () {
     		block,
     		id: create_pending_block$1.name,
     		type: "pending",
-    		source: "(35:23)              <p>Movies are loading</p>             {:then movies}",
+    		source: "(32:23)              <p>Movies are loading</p>         {:then movies}",
     		ctx
     	});
 
@@ -3733,11 +3732,11 @@ var app = (function () {
     			h2.textContent = "From the Hobbits saga to The Lord of the Rings trilogy";
     			t2 = space();
     			if (if_block) if_block.c();
-    			attr_dev(div, "class", "background svelte-bgrb68");
-    			add_location(div, file$4, 30, 4, 748);
-    			add_location(h2, file$4, 31, 4, 783);
-    			attr_dev(main, "class", "svelte-bgrb68");
-    			add_location(main, file$4, 29, 0, 737);
+    			attr_dev(div, "class", "background svelte-1xylers");
+    			add_location(div, file$4, 27, 4, 780);
+    			add_location(h2, file$4, 28, 4, 811);
+    			attr_dev(main, "class", "svelte-1xylers");
+    			add_location(main, file$4, 26, 0, 769);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -3816,7 +3815,7 @@ var app = (function () {
     		await fetch(`${{"env":{"API_TOKEN":"cZ2qmInu4L33DZwT8lld","API_URL":"https://the-one-api.dev/v2"}}.env.API_URL}/movie`, {
     			method: "GET",
     			headers: {
-    				"Authorization": `Bearer ${{"env":{"API_TOKEN":"cZ2qmInu4L33DZwT8lld","API_URL":"https://the-one-api.dev/v2"}}.env.API_TOKEN}`
+    				Authorization: `Bearer ${{"env":{"API_TOKEN":"cZ2qmInu4L33DZwT8lld","API_URL":"https://the-one-api.dev/v2"}}.env.API_TOKEN}`
     			}
     		}).then(result => result.json()).then(data => {
     			localStorage.setItem("movies", JSON.stringify(data.docs));
@@ -5491,14 +5490,14 @@ var app = (function () {
     			create_component(route2.$$.fragment);
     			t6 = space();
     			create_component(route3.$$.fragment);
-    			attr_dev(span, "class", "svelte-1h7bpe9");
+    			attr_dev(span, "class", "svelte-1riq41w");
     			add_location(span, file, 11, 8, 380);
-    			attr_dev(nav, "class", "svelte-1h7bpe9");
+    			attr_dev(nav, "class", "svelte-1riq41w");
     			add_location(nav, file, 12, 8, 426);
-    			attr_dev(header, "class", "svelte-1h7bpe9");
+    			attr_dev(header, "class", "svelte-1riq41w");
     			add_location(header, file, 10, 4, 363);
     			add_location(div, file, 20, 8, 622);
-    			attr_dev(main, "class", "svelte-1h7bpe9");
+    			attr_dev(main, "class", "svelte-1riq41w");
     			add_location(main, file, 19, 4, 607);
     		},
     		m: function mount(target, anchor) {
