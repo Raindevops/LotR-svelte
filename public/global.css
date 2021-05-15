@@ -6,7 +6,7 @@
 
 **/
 
-@font-face{
+@font-face {
 	font-family: "Darleston";
 	src: url("/public/fonts/darleston/Darleston") format("otf");
 }
@@ -16,6 +16,7 @@ html, body {
 	width: 100%;
 	height: 100%;
 }
+
 body {
 	color: white;
 	margin: 0;
@@ -24,76 +25,98 @@ body {
 	background-color: black;
 	font-size: 14px;
 }
-@media screen and (min-width: 586px) {
+
+@media screen and (min-width: 576px) {
 	body {
 		font-size: 15px
 	}
 }
-@media  screen and (min-width: 996px) {
+
+@media screen and (min-width: 996px) {
 	body {
 		font-size: 16px
 	}
 }
 
 * {
-box-sizing: border-box;
+	box-sizing: border-box;
 }
 
-h1,h2,h3,h4,h5,h6{
+h1, h2, h3, h4, h5, h6 {
 	font-family: "Darleston";
 	color: #C4B479;
 	font-weight: 100;
 }
 
-h1{
+h1 {
 	font-size: 2.5em;
 }
-h2{
+
+h2 {
 	font-size: 2em;
 }
-h3{
+
+h3 {
 	font-size: 1.5em;
 }
 
-@media screen and (min-width: 586px) {
-	h1{
+@media screen and (min-width: 576px) {
+	h1 {
 		font-size: 4em;
 	}
 	h2 {
-		font-size: 3em;
+		font-size: 2.5em;
 	}
 	h3 {
 		font-size: 2em;
 	}
 }
 
+@media screen and (min-width: 768px) {
+	h2 {
+		font-size: 3em;
+	}
+	h3 {
+		font-size: 2.5em;
+	}
+}
+
 @media screen and (min-width: 996px) {
-	h1{
+	h1 {
 		font-size: 5em;
 	}
 }
 
-.content{
-	width: 300px;
+.content {
+	width: 100%;
 	margin: 0 auto;
 }
-@media screen and (min-width: 586px) {
-	.content{
-		width: 500px;
+
+@media screen and (min-width: 576px) {
+	.content {
+		width: 540px;
 	}
 }
+
+@media screen and (min-width: 768px) {
+	.content {
+		width: 720px;
+	}
+}
+
 @media screen and (min-width: 996px) {
-	.content{
-		width: 768px;
-	}	
+	.content {
+		width: 960px;
+	}
 }
 
 a {
-	color: rgb(0,100,200);
+	color: rgb(0, 100, 200);
 	text-decoration: none;
 }
+
 a:visited {
-	color: rgb(0,80,160);
+	color: rgb(0, 80, 160);
 }
 
 label {
@@ -133,11 +156,12 @@ button:focus {
 	border-color: #666;
 }
 
-p.list-item{
+li.list-item {
 	position: relative;
 }
-p.list-item.left::before, p.list-item.right::after{
-	content:"";
+
+li.list-item.left::before, li.list-item.right::before {
+	content: "";
 	display: inline-block;
 	height: 1.6rem;
 	width: 1.65rem;
@@ -147,15 +171,30 @@ p.list-item.left::before, p.list-item.right::after{
 	position: relative;
 	top: .5rem;
 }
-p.list-item.left::before{
+
+li.list-item.left::before, li.list-item.right::before {
 	margin-right: .75rem;
 }
-p.list-item.right::after{
-	margin-left: .75rem;
+
+@media screen and (min-width: 768px) {
+	li.list-item.right::before {
+		display: none;
+	}
+	li.list-item.right::after {
+		margin-left: .75rem;
+		content: "";
+		display: inline-block;
+		height: 1.6rem;
+		width: 1.65rem;
+		background-image: url("./assets/list-icon--white.png");
+		background-size: contain;
+		background-repeat: no-repeat;
+		position: relative;
+		top: .5rem;
+	}
 }
 
-ul{
+ul {
 	list-style: none;
 	padding-left: 0;
 }
-

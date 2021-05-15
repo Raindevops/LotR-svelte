@@ -1,14 +1,13 @@
 <script>
     import { onMount } from "svelte";
-    import ParseString from "../../Helpers/ParseString";
 
     export let book;
     let chapters;
 
     onMount(async function () {
         if (localStorage.getItem(`bookID-${book._id}`)) {
-             chapters = JSON.parse(localStorage.getItem(`bookID-${book._id}`));
-             return
+            chapters = JSON.parse(localStorage.getItem(`bookID-${book._id}`));
+            return;
         }
         const req = await fetch(
             `${__lotr.env.API_URL}/book/${book._id}/chapter`
@@ -24,49 +23,65 @@
         <h2>{book.name}</h2>
     </div>
     {#if chapters != undefined}
-        <div class="content">
-            {#await chapters}
-                <p>loading</p>
-            {:then _}
-                <table width="100%">
-                    <tr>
-                        <td align="left">
-                            {#each chapters as chap, i}
-                                {#if i <= Math.ceil(chapters.length / 2)}
-                                    <p class="list-item left">{chap.chapterName}</p>
-                                {/if}
-                            {/each}
-                        </td>
-                        <td align="right">
-                            {#each chapters as chap, i}
-                                {#if i >= Math.ceil(chapters.length / 2)}
-                                    <p class="list-item right">{chap.chapterName}</p>
-                                {/if}
-                            {/each}
-                        </td>
-                    </tr>
-                </table>
-            {/await}
-        </div>
+        {#await chapters}
+            <p>loading</p>
+        {:then _}
+            <div class="content">
+                <ul class="chapters-left">
+                    {#each chapters as chap, i}
+                        {#if i <= Math.ceil(chapters.length / 2)}
+                            <li class="list-item left">{chap.chapterName}</li>
+                        {/if}
+                    {/each}
+                </ul>
+                <ul class="chapters-right">
+                    {#each chapters as chap, i}
+                        {#if i >= Math.ceil(chapters.length / 2)}
+                            <li class="list-item right">{chap.chapterName}</li>
+                        {/if}
+                    {/each}
+                </ul>
+            </div>
+        {/await}
     {/if}
 </div>
 
 <style type="text/scss">
     .book {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        height: 100%;
-        min-height: fit-content;
+        margin-bottom: 2rem;
+        @media screen and (min-width: 768px){
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            height: calc(100vh - 65px);
+            min-height: fit-content;
+            margin-bottom: 0;
+        }
         h2 {
             margin: 0 0 2rem 0;
         }
     }
     .content {
-        text-align: left;
-        table {
-            td {
-                vertical-align: top;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        width: fit-content;
+        @media (min-width: 768px) {
+            width: unset;
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap: 2rem;
+        }
+        ul {
+            margin: 0;
+            text-align: left;
+            @media (min-width: 768px) {
+                &.chapters-left {
+                    text-align: left;
+                    grid-column: 1;
+                }
+                &.chapters-right {
+                    text-align: right;
+                    grid-column: 2;
+                }
             }
         }
     }
