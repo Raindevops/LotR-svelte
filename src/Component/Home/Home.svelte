@@ -15,7 +15,7 @@
             Set in Middle-earth, the world at some distant time in the past, the story began as a sequel to Tolkien's 1937 children's book The Hobbit, but eventually developed into a much larger work.
             Written in stages between 1937 and 1949, The Lord of the Rings is one of the best-selling books ever written, with over 150 million copies sold.
             </p>
-            <p>Using <a href="https://the-one-api.dev/v2"><i>The one API</i></a> this project referenced datas abouts books and movies, and all characters from Tolkien's Universe.
+            <p>Using <a href="https://the-one-api.dev"><i>The one API</i></a> this project referenced datas abouts books and movies, and all characters from Tolkien's Universe.
             </p>
         </div>
 
