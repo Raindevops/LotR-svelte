@@ -18,7 +18,7 @@
 
 </script>
 
-<main>
+<section class="books">
     <div class="background">
     </div>
     {#if books !== undefined}
@@ -30,11 +30,12 @@
                 {/each}
         {/await}
     {/if}
-</main>
+</section>
 
 <style type="text/scss">
-    main{
+    .books{
         position: relative;
+        margin-top: 70px;
         .background{
             background-image: url('../assets/book-background.png');
             background-repeat: no-repeat;

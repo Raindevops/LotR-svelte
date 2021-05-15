@@ -64,9 +64,9 @@
     .content {
         display: grid;
         grid-template-columns: repeat(1, 1fr);
-        width: fit-content;
+        max-width: fit-content;
         @media (min-width: 768px) {
-            width: unset;
+            max-width: unset;
             grid-template-columns: repeat(2, 1fr);
             grid-gap: 2rem;
         }

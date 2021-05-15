@@ -26,7 +26,8 @@
 
 .home{
     width: 100%;
-    height: calc(100% - 65px);
+    margin-top: 70px;
+    height: calc(100% - 140px);
     display: flex;
     align-items: center;
     justify-content: center;

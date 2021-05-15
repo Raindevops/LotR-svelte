@@ -24,7 +24,7 @@
     });
 </script>
 
-<main>
+<section class="movies-section">
     <div class="background" />
     <h2>From the Hobbits saga to The Lord of the Rings trilogy</h2>
 
@@ -41,11 +41,12 @@
             </div>
         {/await}
     {/if}
-</main>
+</section>
 
 <style type="text/scss">
-    main {
+    .movies-section {
         position: relative;
+        margin-top: 70px;
         .background {
             background-image: url("../assets/movie-background.jpg");
             background-repeat: no-repeat;
@@ -56,10 +57,19 @@
             top: 0;
             left: 0;
             z-index: -1;
-            opacity: .2;
-            filter: saturate(.3)
+            opacity: 0.2;
+            filter: saturate(0.3);
         }
-        margin-top: 65px;
+        h2{
+            padding: 1rem 0;
+            @media screen and (min-width: 576px)
+            {
+                padding: 2rem 0;
+            }
+            @media screen and (min-width: 768px) {
+                padding: 3rem 0;
+            }
+        }
         .movies {
             display: grid;
             grid-gap: 2rem;

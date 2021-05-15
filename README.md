@@ -21,5 +21,4 @@ It uses an free api which reference books, chapters, actors, and famous quote
     npm run build 
 
 @todo : 
-    - fix responsive
     - add animations
