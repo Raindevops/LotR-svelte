@@ -29,7 +29,7 @@ import SingleMovie from './SingleMovie.svelte';
 
 <main>
     <div class="background"></div>
-    <h1>From the Hobbits saga to The Lord of the Rings trilogy</h1>
+    <h2>From the Hobbits saga to The Lord of the Rings trilogy</h2>
 
     {#if movies !== undefined}
         {#await movies}

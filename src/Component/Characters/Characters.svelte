@@ -90,7 +90,7 @@
     <div class="characters-background">
         <img src="../assets/old-book.jpg" alt="old book">
     </div>
-    <h1>Discover famous characters from Tolkien's universe</h1>
+    <h2>Discover famous characters from Tolkien's universe</h2>
     {#if datas}
         {#await datas}
             <p>Is loading</p>
@@ -164,7 +164,7 @@
 	        font-family: "Darleston";
             color: $gold;
             display: block;
-            font-size: 3em;
+            font-size: 1.5em;
         }
         select{
             width: 100%;
