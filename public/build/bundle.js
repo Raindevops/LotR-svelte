@@ -2209,19 +2209,19 @@ var app = (function () {
 
     function get_each_context$5(ctx, list, i) {
     	const child_ctx = ctx.slice();
-    	child_ctx[4] = list[i];
-    	child_ctx[6] = i;
+    	child_ctx[3] = list[i];
+    	child_ctx[5] = i;
     	return child_ctx;
     }
 
     function get_each_context_1$1(ctx, list, i) {
     	const child_ctx = ctx.slice();
-    	child_ctx[4] = list[i];
-    	child_ctx[6] = i;
+    	child_ctx[3] = list[i];
+    	child_ctx[5] = i;
     	return child_ctx;
     }
 
-    // (36:4) {#if chapters != undefined}
+    // (26:4) {#if chapters != undefined}
     function create_if_block$5(ctx) {
     	let div;
     	let promise;
@@ -2234,7 +2234,7 @@ var app = (function () {
     		pending: create_pending_block$3,
     		then: create_then_block$3,
     		catch: create_catch_block$3,
-    		value: 3
+    		value: 2
     	};
 
     	handle_promise(promise = /*chapters*/ ctx[1], info);
@@ -2244,7 +2244,7 @@ var app = (function () {
     			div = element("div");
     			info.block.c();
     			attr_dev(div, "class", "content svelte-c7o4rj");
-    			add_location(div, file$7, 36, 4, 1058);
+    			add_location(div, file$7, 26, 8, 739);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -2258,7 +2258,7 @@ var app = (function () {
 
     			if (dirty & /*chapters*/ 2 && promise !== (promise = /*chapters*/ ctx[1]) && handle_promise(promise, info)) ; else {
     				const child_ctx = ctx.slice();
-    				child_ctx[3] = info.resolved;
+    				child_ctx[2] = info.resolved;
     				info.block.p(child_ctx, dirty);
     			}
     		},
@@ -2274,14 +2274,14 @@ var app = (function () {
     		block,
     		id: create_if_block$5.name,
     		type: "if",
-    		source: "(36:4) {#if chapters != undefined}",
+    		source: "(26:4) {#if chapters != undefined}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (1:0) <script>     import {onMount}
+    // (1:0) <script>     import { onMount }
     function create_catch_block$3(ctx) {
     	const block = { c: noop, m: noop, p: noop, d: noop };
 
@@ -2289,21 +2289,21 @@ var app = (function () {
     		block,
     		id: create_catch_block$3.name,
     		type: "catch",
-    		source: "(1:0) <script>     import {onMount}",
+    		source: "(1:0) <script>     import { onMount }",
     		ctx
     	});
 
     	return block;
     }
 
-    // (40:8) {:then _}
+    // (30:12) {:then _}
     function create_then_block$3(ctx) {
     	let table;
     	let tr;
     	let td0;
     	let t;
     	let td1;
-    	let each_value_1 = /*chaps*/ ctx[2];
+    	let each_value_1 = /*chapters*/ ctx[1];
     	validate_each_argument(each_value_1);
     	let each_blocks_1 = [];
 
@@ -2311,7 +2311,7 @@ var app = (function () {
     		each_blocks_1[i] = create_each_block_1$1(get_each_context_1$1(ctx, each_value_1, i));
     	}
 
-    	let each_value = /*chaps*/ ctx[2];
+    	let each_value = /*chapters*/ ctx[1];
     	validate_each_argument(each_value);
     	let each_blocks = [];
 
@@ -2338,13 +2338,13 @@ var app = (function () {
 
     			attr_dev(td0, "align", "left");
     			attr_dev(td0, "class", "svelte-c7o4rj");
-    			add_location(td0, file$7, 42, 20, 1229);
+    			add_location(td0, file$7, 32, 24, 930);
     			attr_dev(td1, "align", "right");
     			attr_dev(td1, "class", "svelte-c7o4rj");
-    			add_location(td1, file$7, 49, 20, 1545);
-    			add_location(tr, file$7, 41, 16, 1204);
+    			add_location(td1, file$7, 39, 24, 1291);
+    			add_location(tr, file$7, 31, 20, 901);
     			attr_dev(table, "width", "100%");
-    			add_location(table, file$7, 40, 12, 1167);
+    			add_location(table, file$7, 30, 16, 860);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, table, anchor);
@@ -2363,8 +2363,8 @@ var app = (function () {
     			}
     		},
     		p: function update(ctx, dirty) {
-    			if (dirty & /*chaps, Math*/ 4) {
-    				each_value_1 = /*chaps*/ ctx[2];
+    			if (dirty & /*chapters, Math*/ 2) {
+    				each_value_1 = /*chapters*/ ctx[1];
     				validate_each_argument(each_value_1);
     				let i;
 
@@ -2387,8 +2387,8 @@ var app = (function () {
     				each_blocks_1.length = each_value_1.length;
     			}
 
-    			if (dirty & /*chaps, Math*/ 4) {
-    				each_value = /*chaps*/ ctx[2];
+    			if (dirty & /*chapters, Math*/ 2) {
+    				each_value = /*chapters*/ ctx[1];
     				validate_each_argument(each_value);
     				let i;
 
@@ -2422,17 +2422,17 @@ var app = (function () {
     		block,
     		id: create_then_block$3.name,
     		type: "then",
-    		source: "(40:8) {:then _}",
+    		source: "(30:12) {:then _}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (45:28) {#if i <= Math.ceil(chaps.length/2)}
+    // (35:32) {#if i <= Math.ceil(chapters.length / 2)}
     function create_if_block_2(ctx) {
     	let p;
-    	let t_value = /*chap*/ ctx[4] + "";
+    	let t_value = /*chap*/ ctx[3].chapterName + "";
     	let t;
 
     	const block = {
@@ -2440,14 +2440,14 @@ var app = (function () {
     			p = element("p");
     			t = text(t_value);
     			attr_dev(p, "class", "list-item left");
-    			add_location(p, file$7, 45, 32, 1393);
+    			add_location(p, file$7, 35, 36, 1114);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, p, anchor);
     			append_dev(p, t);
     		},
     		p: function update(ctx, dirty) {
-    			if (dirty & /*chaps*/ 4 && t_value !== (t_value = /*chap*/ ctx[4] + "")) set_data_dev(t, t_value);
+    			if (dirty & /*chapters*/ 2 && t_value !== (t_value = /*chap*/ ctx[3].chapterName + "")) set_data_dev(t, t_value);
     		},
     		d: function destroy(detaching) {
     			if (detaching) detach_dev(p);
@@ -2458,16 +2458,16 @@ var app = (function () {
     		block,
     		id: create_if_block_2.name,
     		type: "if",
-    		source: "(45:28) {#if i <= Math.ceil(chaps.length/2)}",
+    		source: "(35:32) {#if i <= Math.ceil(chapters.length / 2)}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (44:24) {#each chaps as chap, i}
+    // (34:28) {#each chapters as chap, i}
     function create_each_block_1$1(ctx) {
-    	let show_if = /*i*/ ctx[6] <= Math.ceil(/*chaps*/ ctx[2].length / 2);
+    	let show_if = /*i*/ ctx[5] <= Math.ceil(/*chapters*/ ctx[1].length / 2);
     	let if_block_anchor;
     	let if_block = show_if && create_if_block_2(ctx);
 
@@ -2481,7 +2481,7 @@ var app = (function () {
     			insert_dev(target, if_block_anchor, anchor);
     		},
     		p: function update(ctx, dirty) {
-    			if (dirty & /*chaps*/ 4) show_if = /*i*/ ctx[6] <= Math.ceil(/*chaps*/ ctx[2].length / 2);
+    			if (dirty & /*chapters*/ 2) show_if = /*i*/ ctx[5] <= Math.ceil(/*chapters*/ ctx[1].length / 2);
 
     			if (show_if) {
     				if (if_block) {
@@ -2506,17 +2506,17 @@ var app = (function () {
     		block,
     		id: create_each_block_1$1.name,
     		type: "each",
-    		source: "(44:24) {#each chaps as chap, i}",
+    		source: "(34:28) {#each chapters as chap, i}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (52:28) {#if i >= Math.ceil(chaps.length/2)}
+    // (42:32) {#if i >= Math.ceil(chapters.length / 2)}
     function create_if_block_1$1(ctx) {
     	let p;
-    	let t_value = /*chap*/ ctx[4] + "";
+    	let t_value = /*chap*/ ctx[3].chapterName + "";
     	let t;
 
     	const block = {
@@ -2524,14 +2524,14 @@ var app = (function () {
     			p = element("p");
     			t = text(t_value);
     			attr_dev(p, "class", "list-item right");
-    			add_location(p, file$7, 52, 32, 1710);
+    			add_location(p, file$7, 42, 36, 1476);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, p, anchor);
     			append_dev(p, t);
     		},
     		p: function update(ctx, dirty) {
-    			if (dirty & /*chaps*/ 4 && t_value !== (t_value = /*chap*/ ctx[4] + "")) set_data_dev(t, t_value);
+    			if (dirty & /*chapters*/ 2 && t_value !== (t_value = /*chap*/ ctx[3].chapterName + "")) set_data_dev(t, t_value);
     		},
     		d: function destroy(detaching) {
     			if (detaching) detach_dev(p);
@@ -2542,16 +2542,16 @@ var app = (function () {
     		block,
     		id: create_if_block_1$1.name,
     		type: "if",
-    		source: "(52:28) {#if i >= Math.ceil(chaps.length/2)}",
+    		source: "(42:32) {#if i >= Math.ceil(chapters.length / 2)}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (51:24) {#each chaps as chap, i}
+    // (41:28) {#each chapters as chap, i}
     function create_each_block$5(ctx) {
-    	let show_if = /*i*/ ctx[6] >= Math.ceil(/*chaps*/ ctx[2].length / 2);
+    	let show_if = /*i*/ ctx[5] >= Math.ceil(/*chapters*/ ctx[1].length / 2);
     	let if_block_anchor;
     	let if_block = show_if && create_if_block_1$1(ctx);
 
@@ -2565,7 +2565,7 @@ var app = (function () {
     			insert_dev(target, if_block_anchor, anchor);
     		},
     		p: function update(ctx, dirty) {
-    			if (dirty & /*chaps*/ 4) show_if = /*i*/ ctx[6] >= Math.ceil(/*chaps*/ ctx[2].length / 2);
+    			if (dirty & /*chapters*/ 2) show_if = /*i*/ ctx[5] >= Math.ceil(/*chapters*/ ctx[1].length / 2);
 
     			if (show_if) {
     				if (if_block) {
@@ -2590,14 +2590,14 @@ var app = (function () {
     		block,
     		id: create_each_block$5.name,
     		type: "each",
-    		source: "(51:24) {#each chaps as chap, i}",
+    		source: "(41:28) {#each chapters as chap, i}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (38:25)                  <p>loading</p>         {:then _}
+    // (28:29)                  <p>loading</p>             {:then _}
     function create_pending_block$3(ctx) {
     	let p;
 
@@ -2605,7 +2605,7 @@ var app = (function () {
     		c: function create() {
     			p = element("p");
     			p.textContent = "loading";
-    			add_location(p, file$7, 38, 16, 1122);
+    			add_location(p, file$7, 28, 16, 807);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, p, anchor);
@@ -2620,7 +2620,7 @@ var app = (function () {
     		block,
     		id: create_pending_block$3.name,
     		type: "pending",
-    		source: "(38:25)                  <p>loading</p>         {:then _}",
+    		source: "(28:29)                  <p>loading</p>             {:then _}",
     		ctx
     	});
 
@@ -2645,11 +2645,11 @@ var app = (function () {
     			t1 = space();
     			if (if_block) if_block.c();
     			attr_dev(h2, "class", "svelte-c7o4rj");
-    			add_location(h2, file$7, 33, 8, 990);
+    			add_location(h2, file$7, 23, 8, 667);
     			attr_dev(div0, "class", "title");
-    			add_location(div0, file$7, 32, 4, 962);
+    			add_location(div0, file$7, 22, 4, 639);
     			attr_dev(div1, "class", "book svelte-c7o4rj");
-    			add_location(div1, file$7, 31, 0, 939);
+    			add_location(div1, file$7, 21, 0, 616);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -2701,28 +2701,18 @@ var app = (function () {
     	let { $$slots: slots = {}, $$scope } = $$props;
     	validate_slots("SingleBook", slots, []);
     	let { book } = $$props;
-    	let chapters = [];
-    	let chaps = [];
+    	let chapters;
 
     	onMount(async function () {
     		if (localStorage.getItem(`bookID-${book._id}`)) {
     			$$invalidate(1, chapters = JSON.parse(localStorage.getItem(`bookID-${book._id}`)));
-
-    			$$invalidate(2, chaps = chapters.map(chap => {
-    				return chap.chapterName = ParseString$1.removeUselessSpace(chap.chapterName);
-    			}));
-
     			return;
     		}
 
-    		await fetch(`${{"env":{"API_TOKEN":"cZ2qmInu4L33DZwT8lld","API_URL":"https://the-one-api.dev/v2"}}.env.API_URL}/book/${book._id}/chapter`).then(resp => resp.json()).then(data => {
-    			$$invalidate(1, chapters = data.docs);
-    			localStorage.setItem(`bookID-${book._id}`, JSON.stringify(chapters));
-    		});
-
-    		$$invalidate(2, chaps = chapters.map(chap => {
-    			return chap.chapterName = ParseString$1.removeUselessSpace(chap.chapterName);
-    		}));
+    		const req = await fetch(`${{"env":{"API_TOKEN":"cZ2qmInu4L33DZwT8lld","API_URL":"https://the-one-api.dev/v2"}}.env.API_URL}/book/${book._id}/chapter`);
+    		const data = await req.json();
+    		$$invalidate(1, chapters = data.docs);
+    		localStorage.setItem(`bookID-${book._id}`, JSON.stringify(chapters));
     	});
 
     	const writable_props = ["book"];
@@ -2735,25 +2725,18 @@ var app = (function () {
     		if ("book" in $$props) $$invalidate(0, book = $$props.book);
     	};
 
-    	$$self.$capture_state = () => ({
-    		onMount,
-    		ParseString: ParseString$1,
-    		book,
-    		chapters,
-    		chaps
-    	});
+    	$$self.$capture_state = () => ({ onMount, ParseString: ParseString$1, book, chapters });
 
     	$$self.$inject_state = $$props => {
     		if ("book" in $$props) $$invalidate(0, book = $$props.book);
     		if ("chapters" in $$props) $$invalidate(1, chapters = $$props.chapters);
-    		if ("chaps" in $$props) $$invalidate(2, chaps = $$props.chaps);
     	};
 
     	if ($$props && "$$inject" in $$props) {
     		$$self.$inject_state($$props.$$inject);
     	}
 
-    	return [book, chapters, chaps];
+    	return [book, chapters];
     }
 
     class SingleBook extends SvelteComponentDev {
