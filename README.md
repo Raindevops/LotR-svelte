@@ -25,3 +25,5 @@ It uses an free api which reference books, chapters, actors, and famous quote
 **run the project:**
 
     docker run --rm -d -p 80:80 raindevops/lotr
+
+⚠️ Even if this project is no more maintained, you can still run the docker command to visit the website ⚠️
